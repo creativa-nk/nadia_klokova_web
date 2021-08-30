@@ -58,7 +58,7 @@ section{
   animation-delay: 8s;
 }
 .planta{
-  animation: fadeInDownBig 0.7s 9s forwards, shakeX .12s 9.3s;
+  animation: fadeInDownBig 0.9s 9s forwards, shakeX .12s 9.5s;
 }
 
 
@@ -116,55 +116,16 @@ section{
 
 
 
-
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
-}
-
-
 /* ----------------------------ANIMACIONES---------------------------- */
 @keyframes bg_window{
   0%{
-    background:rgb(1, 64, 253);
-  }
-  10%{
-    background:rgb(0, 28, 110);
-  }
-  30%{
     background:rgb(0, 14, 54);
   }
-/*   30%{
-      background:rgb(183, 253, 126) ;
-  }
   40%{
-      background:rgb(125, 253, 197) ;
-  } */
-  70%{
-      background:rgb(124, 218, 252) ;
+      background:rgb(123, 220, 255) ;
   }
- /*  60%{
-      background:rgb(123, 155, 250) ;
-  } */
- /*  70%{
-      background:rgb(154, 118, 253) ;
-  }
-  80%{
-      background: rgb(204, 120, 250);
-  }
-  90%{
-      background:rgb(252, 120, 241) ;
-  } */
   100%{
-      background:rgb(1, 64, 253) ;
+    background:rgb(0, 14, 54);
   }
 }
 
@@ -242,4 +203,16 @@ section{
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }

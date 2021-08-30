@@ -71,9 +71,11 @@ h1, h2{
 .segundo span:first-child{
       animation-delay: 15.2s;
 }
-
+.segundo strong{
+  color: #ffe221;
+}
 .segundo span:last-child{
-      color: #ffe221;
+     
       animation-delay: 15s;
 }
 
