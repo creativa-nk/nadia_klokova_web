@@ -69,7 +69,7 @@
     transform: translateY(-200vh);
     transition: transform 0.3s;
     /* animation: aparece_circulo 2s cubic-bezier(.7,1,.7,.9) */ /* forwards */ /* infinite */;
-    animation: ballBouncing 4s linear forwards;
+    animation: ballBouncing 3s 10.5s linear forwards;
     z-index: 100;
     cursor: pointer;
 }
@@ -283,14 +283,17 @@
 
 @media only screen and (max-width: 450px) {
   .container_contact.active{
-    animation: bounceIn .7s 1s forwards;
+    animation: bounceIn .7s 1.2s forwards;
   }
   .hamb{
-    animation: bounceIn .3s 15.5s linear forwards ;
+    animation: bounceIn .7s 13.3s linear forwards ;
   }
   .container_menu{
-    animation: ballBouncing 4s 10s linear forwards;
-}
+    animation: ballBouncing 3s 10s linear forwards;
+  }
+  .container_menu:hover{
+    box-shadow: -1px 6px 3px rgba(50, 50, 0, 0.2);
+  }  
 
 }
 

@@ -264,7 +264,7 @@ section{
     height: 55%;
   }
   .container_bocadillo{
-    top: 57%;
+    top: 54%;
     left: 23%;
     padding: 1em;
   }
@@ -288,27 +288,27 @@ section{
   animation: bounceIn 1s 6s forwards ;
 }
 .window{
-  animation:bounceIn 1s 17s forwards, bg_window 20s 17s infinite;
+  animation:bounceIn 1s 14.5s forwards, bg_window 20s 14.5s infinite;
 }
 .sillon{
-  animation: fadeInDownBig 0.5s 18s forwards, shakeX .12s 18.3s;
+  animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
 }
 .sillon_delante{
-  animation: fadeInDownBig 0.5s 18s forwards, shakeX .12s 18.3s;
+  animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
 }
 .chica{
-  animation-delay: 19.5s;
+  animation-delay: 16.5s;
 }
 .planta{
-  animation: fadeInDownBig 0.9s 20s forwards, shakeX .12s 20.9s;
+  animation: fadeInDownBig 0.7s 17s forwards, shakeX .12s 17.4s;
 }
 
 .container_bocadillo,.container_bocadillo::after,.container_bocadillo::before{
-  animation: bounceIn 1s 22s forwards ;
+  animation: bounceIn 1s 19s forwards ;
 }
 
 .bocadillo p {
   animation: 
-    typing 3.5s 22s steps(30, end),
-    blink-caret .5s 22s step-end infinite;
+    typing 3.5s 19s steps(30, end),
+    blink-caret .5s 19s step-end infinite;
 }
