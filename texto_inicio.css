@@ -1,5 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100&display=swap');
  
 html, body{
   height: 100%;
@@ -15,9 +16,10 @@ html, body{
 
 .container_texto{
   /* background: coral; */
-  font-family: 'Baloo Paaji', cursive;
+  /* font-family: 'Baloo Paaji', cursive; */
+  font-family: 'Jost', sans-serif;
   width: 400px;
-  height: 220px;
+  height: 350px;
   position: relative;
   top: 10%;
   left: 15%;
@@ -26,6 +28,7 @@ html, body{
 h1, h2{
   font-size: 75px;
   text-transform: uppercase;
+  text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.2);
 }  
   
 .texto {
@@ -60,17 +63,21 @@ h1, h2{
   position: absolute;
 }  
 .segundo span{
-    animation-delay: 5.1s;
-    animation-fill-mode: forwards;
+  animation-duration: 3s;
+  animation-delay: 5.1s;
+  animation-fill-mode: forwards;   
 }
 .segundo span:first-child{
-      animation-delay: 5.2s;
+  animation-duration: 3s;
+  animation-delay: 5.2s;
 }
 .segundo strong{
   color: #ffe221;
+  letter-spacing: 3px;
 }
-.segundo span:last-child{    
-      animation-delay: 5s;
+.segundo span:last-child{ 
+  animation-duration: 3s;   
+  animation-delay: 5s;      
 }
 
 .tercero{ 
@@ -78,16 +85,16 @@ h1, h2{
     position: absolute;
   }  
   .tercero span{
-      animation-delay: 8.9s;
+      animation-delay: 9.1s;
       animation-fill-mode: forwards;
   }
   .tercero span:first-child{
-        animation-delay: 9s;
+        animation-delay: 9.2s;
   }
   
   .tercero span:last-child{
         color: #ffe221;
-        animation-delay: 8.8s;
+        animation-delay: 9s;
   }
 
 
