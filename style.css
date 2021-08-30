@@ -15,7 +15,7 @@ body{
   height: 800px;
   overflow: hidden;
   position: relative;
-  top: 0;
+  top: -10em;
   left: 30%;
 }
 section{
@@ -33,6 +33,7 @@ section{
 }
 .window{
   position: absolute;
+  margin: 1em;
   z-index: -1;
   width: 80%;
   height: 70%;
@@ -46,14 +47,17 @@ section{
  /* filter: saturate(50%); */ /* para animar la imagen noche y dia */
 
 .sillon{
+  bottom: 0;
   z-index: 0;
   animation: fadeInDownBig 0.5s 7s forwards, shakeX .12s 7.3s;
 }
 .sillon_delante{
+  bottom: 0;
   z-index: 2;
   animation: fadeInDownBig 0.5s 7s forwards, shakeX .12s 7.3s;
 }
 .chica{
+  bottom: 0;
   z-index: 1;
   animation-delay: 8s;
 }
@@ -68,9 +72,8 @@ section{
   align-items: center;
   padding: 2em;
   width: auto;
-  top: 30%;
-  right: 40%;
-  
+  top: 40%;
+  right: 40%; 
 }
 
 
@@ -89,7 +92,7 @@ section{
   content: '';
   width: 2em;
   height: .7em;
-  top: 105%;
+  top: 110%;
   right: 5%;
 }
 .container_bocadillo::before{
@@ -97,7 +100,7 @@ section{
   width: .7em;
   height: .7em;
   border-radius: 50%;
-  top: 125%;
+  top: 130%;
   right: 10%;
 }
 .bocadillo p {
@@ -216,4 +219,61 @@ section{
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange }
+}
+
+
+/*-------------- MediaQuery-------------- */
+
+@media only screen and (max-width: 450px) { 
+ /*  .section-img{
+    width: 100%;
+  } */
+  body{
+    overflow: hidden;
+  }
+  .container_chica{
+    /* background: rgba(234, 0, 255, 0.294); */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .planta{
+    width: 160%;
+    bottom: 0;
+  }
+  .chica{
+    width: 150%;
+    right: 0;
+  }
+  .sillon{
+   right: 0;
+   width: 150%;
+  }
+  .sillon_delante{
+    right: 0;
+    width: 150%;
+  }
+  .window{
+    margin-top: 5em;
+    width: 90%;
+    height: 55%;
+  }
+  .container_bocadillo{
+    top: 55%;
+    left: 10%;
+    padding: 1em;
+  }
+  .bocadillo p {
+    font-size: 0.7em;
+  }
+  .container_bocadillo::after{
+    top: 115%;
+    right: 20%;
+  }
+  .container_bocadillo::before{
+    top: 150%;
+    right: 30%;
+  }
 }
