@@ -144,5 +144,40 @@ h1, h2{
     padding: 0.5em;
     margin-left: 5%;
   }
+
+  /* Adaptacion de Animation */
+
+  .primero span{
+    animation-delay: 0.6s;
+  }
+  
+  .primero span:first-child{
+      animation-delay: 0.7s;
+  }
+  
+  .primero span:last-child{
+      animation-delay: 0.5s;
+  }
+
+  .segundo span{
+      animation-delay: 4.1s;
+  }
+  .segundo span:first-child{
+        animation-delay: 4.2s;
+  }
+
+  .segundo span:last-child{
+        animation-delay: 4s;
+  } 
+    .tercero span{
+        animation-delay: 8.1s;
+    }
+    .tercero span:first-child{
+          animation-delay: 8.2s;
+    }
+    
+    .tercero span:last-child{
+          animation-delay: 8s;
+    }
 }
 

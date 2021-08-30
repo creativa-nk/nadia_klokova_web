@@ -62,7 +62,7 @@ section{
   animation-delay: 8s;
 }
 .planta{
-  animation: fadeInDownBig 0.9s 9s forwards, shakeX .12s 9.5s;
+  animation: fadeInDownBig 0.9s 9s forwards, shakeX .12s 9.9s;
 }
 
 
@@ -71,7 +71,7 @@ section{
   justify-content: center;
   align-items: center;
   padding: 2em;
-  width: auto;
+  width: 8em;
   top: 40%;
   right: 40%; 
 }
@@ -241,19 +241,22 @@ section{
   }
   .planta{
     width: 160%;
-    bottom: 0;
+    bottom: 2rem;
   }
   .chica{
     width: 150%;
     right: 0;
+    bottom: 2rem;
   }
   .sillon{
    right: 0;
    width: 150%;
+   bottom: 2rem;
   }
   .sillon_delante{
     right: 0;
     width: 150%;
+    bottom: 2rem;
   }
   .window{
     margin-top: 5em;
@@ -261,8 +264,8 @@ section{
     height: 55%;
   }
   .container_bocadillo{
-    top: 55%;
-    left: 10%;
+    top: 57%;
+    left: 23%;
     padding: 1em;
   }
   .bocadillo p {
@@ -276,4 +279,36 @@ section{
     top: 150%;
     right: 30%;
   }
+}
+
+/*------------- Adaptacion Animation------------- */
+
+
+.section-img{
+  animation: bounceIn 1s 6s forwards ;
+}
+.window{
+  animation:bounceIn 1s 17s forwards, bg_window 20s 17s infinite;
+}
+.sillon{
+  animation: fadeInDownBig 0.5s 18s forwards, shakeX .12s 18.3s;
+}
+.sillon_delante{
+  animation: fadeInDownBig 0.5s 18s forwards, shakeX .12s 18.3s;
+}
+.chica{
+  animation-delay: 19.5s;
+}
+.planta{
+  animation: fadeInDownBig 0.9s 20s forwards, shakeX .12s 20.9s;
+}
+
+.container_bocadillo,.container_bocadillo::after,.container_bocadillo::before{
+  animation: bounceIn 1s 22s forwards ;
+}
+
+.bocadillo p {
+  animation: 
+    typing 3.5s 22s steps(30, end),
+    blink-caret .5s 22s step-end infinite;
 }
