@@ -67,9 +67,10 @@ section{
   justify-content: center;
   align-items: center;
   padding: 2em;
-  width: 12em;
+  width: auto;
   top: 30%;
   right: 40%;
+  
 }
 
 
