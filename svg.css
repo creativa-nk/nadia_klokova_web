@@ -1,0 +1,61 @@
+#sillon_svg{
+    /* background: green; */
+    width: 50%;
+    margin: 30% 0 0 50%;
+    display: block;
+}
+
+#planta_baja{
+    /* background: red; */
+    width: 35%;
+    display: block;
+    position: absolute;
+    top: 0;
+    
+}
+
+.sillon_uno,.sillon_dos,.planta_baja{
+    fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
+    stroke-width: 15px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 80000;
+}
+.sillon_uno{
+    animation: draw 8s 10.5s ease-in-out forwards;
+}
+.sillon_dos{
+    animation: draw 8s 10.5s ease-in-out forwards;  
+}
+
+.planta_baja{
+    animation: draw 5s 13s linear forwards;  
+}
+
+
+
+@keyframes draw {
+    0%{
+        stroke: rgb(255, 254, 254);
+        stroke-dashoffset: 80000;
+    }
+    100%{
+        stroke: rgb(255, 254, 254);
+        stroke-dashoffset: 0;
+    }
+}
+
+@media only screen and (max-width:450px){
+    #sillon_svg{
+        /* background: green; */
+        width: 260px;
+        margin: 280px 0 0 140px;
+        display: block;
+    }
+    
+    #planta_baja{
+        /* background: red; */
+        width: 160px;
+        margin-top: 10%;
+        bottom: 0;
+    }
+}
