@@ -10,7 +10,7 @@
     border-radius: 33% 40% 60% 20% / 60% 40% 45% 25%;
     box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.164),
       inset 0.2rem -0.2rem 0.5rem rgba(0, 0, 0, 0.16);
-    animation:bounceIn 1s 15s forwards, bg_window 20s 15s infinite;
+    animation:bounceIn 1s 19s forwards, bg_window 20s 19s infinite;
 }
 
 .moon {
@@ -24,7 +24,7 @@
     box-shadow: 0 0 25px rgba(255, 255, 200, 0.8),
       0 0 1px 15px rgba(82, 115, 159, 0.7), 0 0 1px 40px rgba(82, 115, 149, 0.45),
       0 0 1px 90px rgba(82, 115, 149, 0.3), 0 0 1px 160px rgba(92, 115, 149, 0.1);
-    animation: sun 20s 15s infinite;  
+    animation: sun 20s 19s infinite;  
   }
   .moon:before {
     position: absolute;
@@ -141,10 +141,26 @@
         0 0 1px 15px rgba(82, 115, 159, 0.7), 0 0 1px 40px rgba(82, 115, 149, 0.45),
         0 0 1px 90px rgba(82, 115, 149, 0.3), 0 0 1px 160px rgba(92, 115, 149, 0.1);
       }
-      30%, 40%{
+      10%{
         background:rgba(251, 251, 159, 0.9) ;
         box-shadow: 0 0 25px rgba(251, 251, 159, 0.9),
         0 0 1px 15px rgba(251, 251, 159, 0.9);
+      }
+      25%,35%{
+        background:rgba(251, 251, 159, 0.9) ;
+        box-shadow: 0 0 25px rgba(251, 251, 159, 0.9),
+        0 0 1px 15px rgba(251, 251, 159, 0.8), 0 0 1px 40px rgba(251, 251, 159, 0.3),
+        0 0 1px 90px rgba(251, 251, 159, 0.2), 0 0 1px 160px rgba(251, 251, 159, 0.1); 
+      }
+      60%{
+        background:rgba(251, 251, 159, 0.9) ;
+        box-shadow: 0 0 25px rgba(251, 251, 159, 0.4),
+        0 0 1px 15px rgba(251, 251, 159, 0.3);  
+      }
+      70%{
+        background: #eee;
+        box-shadow: 0 0 25px rgba(255, 255, 200, 0.5),
+        0 0 1px 15px rgba(82, 115, 159, 0.4); 
       }
       90%,100%{
         background: #eee;
@@ -164,4 +180,22 @@
       80%,100%{
         opacity: 1;
       }
+  }
+
+
+  @media only screen and (max-width:450px){
+    .window{
+        margin-top: 5em;
+        width: 80%;
+        height: 55%;
+      }
+      .star {
+        height: 2px;
+        width: 2px;
+      }
+      .shooting-star {
+        top: 140px;
+        left: 50px;
+      }
+
   }
