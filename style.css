@@ -74,7 +74,7 @@ section{
   padding: 2em;
   width: auto;
   top: 40%;
-  right: 40%; 
+  right: 30%; 
   animation: appear 0.7s 19.7s forwards;
 }
 
@@ -246,7 +246,7 @@ section{
     overflow: hidden;
   }
   .container_chica{
-    /* background: rgba(234, 0, 255, 0.294); */
+  /*   background: rgba(234, 0, 255, 0.294); */
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -258,7 +258,7 @@ section{
     bottom: 2rem;
   }
   .chica{
-    width: 150%;
+    width: 100%;
     right: 0;
     bottom: 2rem;
   }
