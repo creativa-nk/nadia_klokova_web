@@ -33,14 +33,14 @@
     stroke-dasharray: 80000;
 }
 .sillon_uno{
-    animation: draw 8s 10.5s ease-in-out forwards;
+    animation: draw 6s 11s ease-in-out forwards;
 }
 .sillon_dos{
-    animation: draw 8s 10.5s ease-in-out forwards;  
+    animation: draw 6s 11.5s ease-in-out forwards;  
 }
 
 .planta_baja{
-    animation: draw 5s 13s linear forwards;  
+    animation: draw 4s 13s linear forwards;  
 }
 
 
