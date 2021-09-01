@@ -282,7 +282,7 @@
   /*-------------- MediaQuery-------------- */
 
 @media only screen and (max-width: 450px) {
-  .container_contact.active{
+/*   .container_contact.active{
     animation: bounceIn .7s 1.2s forwards;
   }
   .hamb{
@@ -290,7 +290,7 @@
   }
   .container_menu{
     animation: ballBouncing 3s 10s linear forwards;
-  }
+  } */
   .container_menu:hover{
     box-shadow: -1px 6px 3px rgba(50, 50, 0, 0.2);
   }  

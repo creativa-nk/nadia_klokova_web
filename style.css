@@ -6,7 +6,8 @@
 }
 
 body{
-  background: rgb(168,208,230 );
+  /* background: rgb(168,208,230 ); */
+  background: rgb(104, 192, 214);
 }
 
 .container_chica{
@@ -278,7 +279,7 @@ section{
     height: 55%;
   }
   .container_bocadillo{
-    top: 54%;
+    top: 56%;
     left: 23%;
     padding: 1em;
   }
