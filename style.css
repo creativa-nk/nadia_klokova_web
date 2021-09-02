@@ -247,11 +247,11 @@ section{
     overflow: hidden;
   }
   .container_chica{
-  /*   background: rgba(234, 0, 255, 0.294); */
+    /* background: rgba(234, 0, 255, 0.294); */
     width: 100vw;
-    height: 100vh;
+    height: 600px;
     position: absolute;
-    top: 0;
+    top: 5rem;
     left: 0;
   }
   .planta{
@@ -275,8 +275,8 @@ section{
     bottom: 2rem;
   }
   .container_bocadillo{
-    top: 54%;
-    right: 50%;
+    top: 47%;
+    right: 45%;
     padding: 1em;
   }
   .bocadillo p {
