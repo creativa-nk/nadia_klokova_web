@@ -6,12 +6,14 @@
 }
 
 body{
-  background: rgb(168,208,230 );
+  /* background: rgb(168,208,230 ); */
+  /* background: rgb(104, 192, 214); */
+  background: rgb(140, 206, 241);
 }
 
 .container_chica{
   /* background: rgba(255, 0, 0, 0.294); */
-  width: 1000px;
+  width: 1100px;
   height: 800px;
   overflow: hidden;
   position: relative;
@@ -41,7 +43,7 @@ section{
   border-radius: 33% 40% 60% 20% / 60% 40% 45% 25%;
   box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.164),
     inset 0.2rem -0.2rem 0.5rem rgba(0, 0, 0, 0.16);
-  animation:bounceIn 1s 6s forwards, bg_window 20s 6s infinite;
+  animation:bounceIn 1s 15s forwards, bg_window 20s 15s infinite;
 }
 
  /* filter: saturate(50%); */ /* para animar la imagen noche y dia */
@@ -74,8 +76,8 @@ section{
   padding: 2em;
   width: auto;
   top: 40%;
-  right: 40%; 
-  animation: appear 0.7s 19.7s forwards;
+  right: 30%; 
+  animation: appear 0.7s 26s forwards;
 }
 
 
@@ -87,7 +89,6 @@ section{
   position: absolute ;
   z-index: 1;
   opacity: 0;
-  /* animation: bounceIn 1s 21s forwards ; */
 }
 
 .container_bocadillo::after{
@@ -96,7 +97,7 @@ section{
   height: .7em;
   top: 110%;
   right: 5%;
-  animation: appear 0.7s 20.3s forwards;
+  animation: appear 0.7s 26.3s forwards;
 }
 .container_bocadillo::before{
   content: '';
@@ -105,7 +106,7 @@ section{
   border-radius: 50%;
   top: 130%;
   right: 10%;
-  animation: appear 0.7s 20.8s forwards;
+  animation: appear 0.7s 26.6s forwards;
 }
 .bocadillo p {
   color: #774f38;
@@ -118,8 +119,8 @@ section{
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3.5s 22s steps(30, end),
-    blink-caret .5s 22s step-end infinite;
+    typing 3.5s 26s steps(30, end),
+    blink-caret .5s 26s step-end infinite;
 }
 
 
@@ -248,9 +249,9 @@ section{
   .container_chica{
     /* background: rgba(234, 0, 255, 0.294); */
     width: 100vw;
-    height: 100vh;
+    height: 600px;
     position: absolute;
-    top: 0;
+    top: 5rem;
     left: 0;
   }
   .planta{
@@ -258,7 +259,7 @@ section{
     bottom: 2rem;
   }
   .chica{
-    width: 150%;
+    width: 100%;
     right: 0;
     bottom: 2rem;
   }
@@ -273,26 +274,25 @@ section{
     width: 150%;
     bottom: 2rem;
   }
-  .window{
-    margin-top: 5em;
-    width: 90%;
-    height: 55%;
-  }
   .container_bocadillo{
-    top: 54%;
-    left: 23%;
+    top: 47%;
+    right: 45%;
     padding: 1em;
   }
   .bocadillo p {
     font-size: 0.7em;
   }
   .container_bocadillo::after{
+    width: 1em;
+    height: .3em;
     top: 115%;
-    right: 20%;
+    right: 12%;
   }
   .container_bocadillo::before{
-    top: 150%;
-    right: 30%;
+    width: .3em;
+    height: .3em;
+    top: 137%;
+    right: 6%;
   }
 }
 
@@ -303,7 +303,7 @@ section{
   animation: bounceIn 1s 6s forwards ;
 }
 .window{
-  animation:bounceIn .7s 14.5s forwards, bg_window 20s 14.5s infinite;
+  animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite;
 }
 .sillon{
   animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
@@ -312,7 +312,7 @@ section{
   animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
 }
 .chica{
-  animation-delay: 16.5s;
+  animation-delay: 16.8s;
 }
 .planta{
   animation: fadeInDownBig 0.7s 17s forwards, shakeX .12s 17.4s;
@@ -322,8 +322,8 @@ section{
   animation: bounceIn 1s 19s forwards ;
 } */
 
-.bocadillo p {
+/* .bocadillo p {
   animation: 
     typing 3.5s 19s steps(30, end),
     blink-caret .5s 19s step-end infinite;
-}
+} */
