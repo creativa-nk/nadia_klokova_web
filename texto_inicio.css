@@ -45,6 +45,7 @@ h1, h2{
 }
 
 .primero span{
+  animation-duration: 2s;
   animation-delay: 1.6s;
   animation-fill-mode: forwards;
 }
@@ -63,12 +64,12 @@ h1, h2{
   position: absolute;
 }  
 .segundo span{
-  animation-duration: 3s;
+  animation-duration: 3.5s;
   animation-delay: 5.1s;
   animation-fill-mode: forwards;   
 }
 .segundo span:first-child{
-  animation-duration: 3s;
+  animation-duration: 3.5s;
   animation-delay: 5.2s;
 }
 .segundo strong{
@@ -76,7 +77,7 @@ h1, h2{
   letter-spacing: 3px;
 }
 .segundo span:last-child{ 
-  animation-duration: 3s;   
+  animation-duration: 3.5s;   
   animation-delay: 5s;      
 }
 
