@@ -51,9 +51,33 @@
 .planta_baja{
     animation: draw 4s 13s linear forwards;  
 }
+/* ---------------------CONTACTO-------------- */
+#linkedin{
+    width: 60%;
+    padding: 3px;
+}
+#mail,#gitHub{
+    width: 50%;
+    fill: white;
+}
+#gitHub{
+    width: 55%;
+    fill: white;
+}
+.linkedin,.gitHub{
+    fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
+    stroke-width: 18px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 80000;
+    stroke: rgb(255, 254, 254);
+}
+.mail{
+    stroke-width: 6px;  
+}
 
 
 
+/* --------------Animations---------------- */
 @keyframes draw {
     0%{
         stroke: rgb(255, 254, 254);
