@@ -318,8 +318,8 @@ section{
   animation: bounceIn 1s 19s forwards ;
 } */
 
-.bocadillo p {
+/* .bocadillo p {
   animation: 
     typing 3.5s 19s steps(30, end),
     blink-caret .5s 19s step-end infinite;
-}
+} */

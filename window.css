@@ -154,8 +154,8 @@
       }
       60%{
         background:rgba(251, 251, 159, 0.9) ;
-        box-shadow: 0 0 25px rgba(251, 251, 159, 0.4),
-        0 0 1px 15px rgba(251, 251, 159, 0.3);  
+        box-shadow: 0 0 25px rgba(251, 251, 159, 0.2),
+        0 0 1px 15px rgba(251, 251, 159, 0.1);  
       }
       70%{
         background: #eee;
