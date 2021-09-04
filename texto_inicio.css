@@ -64,21 +64,21 @@ h1, h2{
   position: absolute;
 }  
 .segundo span{
-  animation-duration: 3.5s;
-  animation-delay: 5.1s;
+  animation-duration: 3.8s;
+  animation-delay: 4.1s;
   animation-fill-mode: forwards;   
 }
 .segundo span:first-child{
-  animation-duration: 3.5s;
-  animation-delay: 5.2s;
+  animation-duration: 3.8s;
+  animation-delay: 4.2s;
 }
 .segundo strong{
   color: #ffe221;
   letter-spacing: 3px;
 }
 .segundo span:last-child{ 
-  animation-duration: 3.5s;   
-  animation-delay: 5s;      
+  animation-duration: 3.8s; 
+  animation-delay: 4.3s;      
 }
 
 .tercero{ 
@@ -184,3 +184,11 @@ h1, h2{
     }
 }
 
+/* --------------------MediaQuery-------------------- */
+@media only screen and (min-width: 760px){
+  .texto{
+    font-size: 60px;
+  
+  }  
+
+}

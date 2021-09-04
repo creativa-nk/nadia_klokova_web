@@ -63,7 +63,7 @@ section{
   padding: 2em;
   width: auto;
   top: 40%;
-  right: 30%; 
+  right: 40%; 
   transition: animation  .7s;
   /*see animation down */
 }
@@ -223,6 +223,20 @@ section{
 
 
 /*-------------- MediaQuery-------------- */
+
+
+@media only screen and (min-width: 760px),(max-width: 800px){
+  .container_chica{
+    /* background: rgba(234, 0, 255, 0.294); */
+    width: 900px;
+    height: 800px;
+    position: absolute;
+    top: 2.5rem;
+    right: 200px;
+  }
+   
+}
+
 
 @media only screen and (max-width: 450px) { 
 
