@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about_me.css">
+    <title>about_me</title>
+</head>
+<body>
+    <section class="about_me">
+        <div class="container_text">
+            <div class="titulo">
+                <span class="letra" style="--i:1">a</span>
+                <span class="letra" style="--i:2">b</span>
+                <span class="letra" style="--i:3">o</span>
+                <span class="letra" style="--i:4">u</span>
+                <span class="letra" style="--i:5">t</span> &nbsp;
+                <span class="letra" style="--i:6">m</span>
+                <span class="letra" style="--i:7">e</span>
+            </div>
+
+            <p style="animation-delay: 1.8s;">
+                I’m a Front-End Developer located in Spain (Madrid). <br>
+            </p>
+            <p style="animation-delay: 2.1s;">
+                I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences. 
+            </p>
+            <p style="animation-delay: 2.4s;">    
+                Well-organised person, problem solver, work with high attention to detail, like teamwork, I consider myself a creative person.  
+            </p>
+            <p style="animation-delay: 2.7s;">
+                Fan of DIY and creative crafts, fitboxing (Brooklyn), TV series.
+            </p>
+            <p style="animation-delay: 3s;">
+               I am looking for the opportunity to be part of a team with a positive environment, to be able to contribute ideas and continue learning and growing professionally.
+            </p>
+            <p style="animation-delay: 3.3s;">
+                <a style="animation-delay: 6s;" href="poner link de la pagina de contacto" rel="contact">Let’s make something special.</a>
+                <!-- <a class="glowIn" style="animation-delay: 6s;" href="poner link de la pagina de contacto" rel="contact">Let’s make something special.</a> -->
+            </p>
+        </div>    
+    </section>
+  
+
+<script>
+        let glowInTexts = document.querySelectorAll(".glowIn");
+        glowInTexts.forEach(glowInText => {
+        let letters = glowInText.textContent.split("");
+        glowInText.textContent = "";
+        letters.forEach((letter, i) => {
+            let span = document.createElement("span");
+            span.textContent = letter;
+            span.style.animationDelay = `${i * 0.05}s`;
+            glowInText.append(span);
+        });
+        });
+
+</script>
+    
+</body>
+</html>
