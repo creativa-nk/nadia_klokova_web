@@ -11,7 +11,7 @@ body{
 }
 .titulo{
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: bold; 
   color: #ffe221;
 }
@@ -33,7 +33,7 @@ body{
     color: white;
     font-family: 'Jost', sans-serif;
     text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.2);
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;  
 }
 .container_text{
@@ -51,54 +51,25 @@ body{
     -o-animation:sectionAnimation 5s  forwards; /* Opera */
     animation:sectionAnimation 5s  forwards;
 }
-/* .container_text:first-child{
-  animation-delay: 3s;
-}
-.container_text:last-child{
-  color: #ffe221;
-  animation-delay: 3.5s;
-} */
-
 .container_text a{
   text-decoration: none; 
+  color: rgb(0, 119, 255);
 }
 .container_text a:hover{
-    color: rgb(0, 119, 255);
-}
-.container_text h1{
-    color:#ffe221;
+    color: rgba(129, 141, 163, 0.7);
 }
 
-span {
-  opacity: 0;
-  -moz-animation: glow-in .6s forwards; /* Firefox */
-  -webkit-animation: glow-in .6s forwards; /* Safari and Chrome */
-  -o-animation: glow-in .6s forwards; /* Opera */
-  animation: glow-in .6s forwards;
+.glowIn{
+ opacity: 0;
+ -moz-animation: appear 3s forwards; /* Firefox */
+ -webkit-animation: appear 3s forwards; /* Safari and Chrome */
+ -o-animation: appear 3s forwards; /* Opera */
+ animation: appear 3s forwards;
+}
 
-  -moz-animation-delay: 7s;
-  -webkit-animation-delay: 7s;
-  -o-animation-delay: 7s;
-  animation-delay: 7s;
-  }
 
 /* -------------------Animations----------------------- */
 
-@keyframes glow-in {
-  from {
-    opacity: 0;
-  }
-  65% {
-    opacity: 1;
-    
-  }
-  75% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.8;
-  }
-}
 
 @keyframes sectionAnimation {
   0% {
@@ -139,3 +110,39 @@ span {
   
 }
 
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* ---------------MediaQuery---------------- */
+
+@media only screen and (max-width:768px) {
+  .container_text{
+    width: 80%;
+    height: auto;
+  }
+  .about_me{
+    font-size: 1.7rem;
+  }
+  .titulo{
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width:450px) and ( orientation: portrait){
+  .container_text{
+    width: 80%;
+    height: auto;
+  }
+  .about_me{
+    font-size: 1.2rem;
+  }
+  .titulo{
+    font-size: 2rem;
+  }
+}

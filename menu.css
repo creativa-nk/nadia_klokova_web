@@ -289,7 +289,7 @@
 
   /*-------------- MediaQuery-------------- */
 
-@media only screen and (max-width: 450px) {
+  @media only screen and (max-width:450px) and ( orientation: portrait){
 /*   .container_contact.active{
     animation: bounceIn .7s 1.2s forwards;
   }
