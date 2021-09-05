@@ -1,9 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-  background: rgb(140, 206, 241);
+.cerebro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: rgb(131, 204, 243);
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-family: 'Jost', sans-serif;
+  text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.2);
+  font-size: 1.6rem;
+  font-weight: bold;  
+}
+.skills{
+  background: rgb(95, 192, 245);
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.skills .titulo{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
+  font-weight: bold; 
+  color: #ffe221;
+  margin-top: 2rem;
+}
+
+
+#cerebro_svg{
+  width: 50%;
+  height: 100%;
+}
+
+.cerebro_izq{
+  animation: draw_izq 4s 1.6s linear forwards;  
+}
+.cerebro_derch{
+  animation: draw_derch 4s linear forwards;  
+}
+
+.cerebro_izq,.cerebro_derch{
+  fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
+  stroke-width: 18px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 80000;
+  /* stroke: rgb(255, 254, 254); */
+}
+
+
+/* --------------Animations---------------- */
+@keyframes draw_izq {
+  0%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 80000;
+  }
+  100%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw_derch {
+  0%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: -80000;
+  }
+  100%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 0;
+  }
 }
