@@ -8,6 +8,15 @@
 body{
   background: rgb(140, 206, 241);
 }
+/* ----------TABS---------- */
+[data-content]{  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  display: none;
+}
+
+.active[data-content]{
+  display: block;
+}
+/* ----------------------------------------------------------------- */
 
 .container_chica{
   /* background: rgba(255, 0, 0, 0.294); */
