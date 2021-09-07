@@ -32,16 +32,6 @@
   flex-direction: column;
   justify-content: space-around;
 }
-/* .skills{
-  top: 0;
-  left: 0;
-}
-
-.soft_skills{
-  top: 0;
-  right: 0;
-} */
-
 .skills .titulo, .soft_skills .titulo{
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -59,7 +49,6 @@
   width: 230px;
   margin-top: .5rem;
 }
-
 .dots{
   width: 80px;
   display: flex;
@@ -72,26 +61,35 @@
   border: 1px solid white;
   border-radius: 50%;
 }
-
 .soft_skills p{
   margin-top: .5rem;
 }
-
 .container_svg{
-  /* background: #ffe221; */
-  width: 50vw;
+  background: #ffe221;
+  width: 900px;
   height: 100vh;
+ /*  width: 50vw;
+  height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .imagen{
  /*  background: red; */
   position: absolute;
   z-index: 0;
-  width: 50vw;
-  height: 100vh;
+  width: 800px;
+  height: 90vh;
 }
 .imagen img{
   width: 100%;
   height: 100%;
+}
+.container_cerebro_svg{
+  position: absolute;
+ /*  background: chartreuse; */
+ width: 900px;
+ height: 100vh;
 }
 #cerebro_svg{
  position: absolute;
@@ -162,23 +160,43 @@
    position: relative;
   }
   .container_svg{
-    width: 100vw;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
   }
   .imagen{
-    width: 100vw;
-    height: auto;
+    /* background: crimson; */
+    width: 260px;
+    height: 260px;
+  }
+  .container_cerebro_svg{
+    width: 300px;
+    height: 300px;
   }
   #cerebro_svg{
     width: 100%;
     height: 100%;
   }
   .cerebro_izq,.cerebro_derch{
-    stroke-width: 22px;
+    stroke-width: 30px;
   }
   .skills .titulo, .soft_skills .titulo{
     font-size: 1rem;
     margin-top: 0;
     padding: 0.2rem 0;
   }
+  .dots{
+    width: 55px;
+  }
+  .dots div{
+    width: 7px;
+    height: 7px;
+  }
+  .skill{
+    width: 150px;
+    margin-top: .2rem;
+  }
+
+
 
 }
