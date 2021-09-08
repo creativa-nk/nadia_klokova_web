@@ -108,10 +108,10 @@
 }
 
 .cerebro_izq{
-  animation: draw_izq 3s linear forwards, brillo_svg 0.7s 4s infinite;  
+  animation: draw_izq 3s linear forwards, brillo_svg 2s 4s infinite;  
 }
 .cerebro_derch{
-  animation: draw_derch 3s linear forwards, brillo_svg 0.7s 4s infinite;  
+  animation: draw_derch 3s linear forwards, brillo_svg 2s 4s infinite;  
 }
 .cerebro_abajo{
   animation: draw_derch 3s linear forwards;
@@ -129,7 +129,7 @@
   stroke-width: 18px;
   stroke-dashoffset: 0;
   stroke-dasharray: 80;
-  animation: draw_derch 3s 3s linear infinite,brillo_svg 0.7s 4s infinite;
+  animation: draw_derch 3s 3s linear infinite,brillo_svg 2s 4s infinite;
 }
 
 
@@ -158,7 +158,7 @@
 
  
 @keyframes brillo_svg{
-  0%{
+  0%,80%{
     -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) ;
             filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
   }
@@ -191,13 +191,19 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   .soft_skills{
    position: relative;
+  }
+  .soft_skills p{
+    margin-top: .4rem;
+  }
+  .titulo_skills span {
+    font-size: 1.3rem;
   }
   .container_languages{
     margin-top: 3.5rem;
@@ -222,7 +228,8 @@
     top: 40%;
   }
   #cerebro_svg{
-    width: 100%;
+    /* background: #fbdc12; */
+    width: 200%;
     height: 100%;
   }
   .cerebro_izq,.cerebro_derch{
