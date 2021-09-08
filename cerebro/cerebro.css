@@ -190,7 +190,7 @@
 
 /* ----------------MediaQuery----------------- */
 @media only screen and (max-width:768px){
-  .cerebro{
+  .wraper_cv{
     flex-direction: column;
     justify-content: space-between;
   }
@@ -207,6 +207,9 @@
   .soft_skills{
    position: relative;
   }
+  .container_lenguages{
+    margin-top: 3.5rem;
+  }
   .container_svg{
     margin: 0 auto;
     width: 300px;
@@ -220,6 +223,11 @@
   .container_cerebro_svg{
     width: 300px;
     height: 300px;
+  }
+  .brillo{
+    width: 50px;
+    height: 10px;
+    top: 40%;
   }
   #cerebro_svg{
     width: 100%;
