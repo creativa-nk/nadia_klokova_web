@@ -11,6 +11,7 @@ menu.classList.toggle('active');
 contact.classList.toggle('active');
 
 
+
 let glowInTexts = document.querySelectorAll(".glowIn");
 glowInTexts.forEach(glowInText => {
   let letters = glowInText.textContent.split("");
@@ -25,6 +26,13 @@ glowInTexts.forEach(glowInText => {
 
 } )
 
+/* btn_cerrar = $(".navegar li")
+
+btn_cerrar.on('click',function(){
+  logo.removeClass("active");
+   menu.removeClass("active"); */ /*  cierra menu dando a cualquier opcion del menu */
+/* })
+ */
 
 /* ---------------pestañas-----------------tabs-------------- */
 

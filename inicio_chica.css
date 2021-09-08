@@ -4,11 +4,11 @@
   }
 .container_chica{
     /* background: rgba(255, 0, 0, 0.294); */
-    width: 1100px;
+    width: 1000px;
     height: 800px;
     overflow: hidden;
-    position: relative;
-    top: -10em;
+    position: absolute;
+    bottom: 2rem;
     left: 30%;
   }
   .section-img{
@@ -70,7 +70,7 @@
     width: 2em;
     height: .7em;
     top: 110%;
-    right: 5%;
+    right: 12%;
     /*see animation down */
   }
   .container_bocadillo::before{
@@ -79,7 +79,7 @@
     height: .7em;
     border-radius: 50%;
     top: 130%;
-    right: 10%;
+    right: 6%;
     /*see animation down */
   }
   .bocadillo p {
@@ -213,7 +213,6 @@
   
   /*-------------- MediaQuery-------------- */
   
-  
   @media only screen and (min-width: 768px) and ( orientation: portrait){
     .container_chica{
       /* background: rgba(234, 0, 255, 0.294); */
@@ -272,13 +271,11 @@
       width: 1em;
       height: .3em;
       top: 115%;
-      right: 12%;
     }
     .container_bocadillo::before{
       width: .3em;
       height: .3em;
       top: 137%;
-      right: 6%;
     }
   }
   
