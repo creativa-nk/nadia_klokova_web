@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-#cv{
+#curriculum{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -17,7 +17,7 @@
   font-family: 'Jost', sans-serif;
   text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.2);
   font-size: 1.6rem;
-  font-weight: bold;  
+  font-weight: bold;   
 }
 .skills, .soft_skills{
   background: rgb(95, 192, 245);
@@ -32,7 +32,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.skills .titulo, .soft_skills .titulo{
+.skills .titulo,.soft_skills .titulo {
   text-transform: uppercase;
   font-size: 1.7rem;
   letter-spacing: 0px;
@@ -40,6 +40,7 @@
   color: #fbdc12;
   margin-top: 2rem;
 }
+
 .skill{
   /* background: cornflowerblue; */
   display: flex;
