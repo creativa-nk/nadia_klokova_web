@@ -8,7 +8,8 @@
 
 #curriculum{
   width: 100vw;
-  height: 100vh;  
+  height: 100vh; 
+  animation: section_zoomIn 1s linear ; 
 }
 .wraper_cv{
   width: 100%;
@@ -43,6 +44,14 @@
   font-weight: bolder; 
   color: #fbdc12;
   margin-top: 2rem;
+}
+.skills.titulo .letra{
+  animation: waviy 1.5s both;
+  animation-delay:3s;
+}
+.soft_skills.titulo .letra{
+  animation: waviy 1.5s both;
+  animation-delay:3s;
 }
 
 .skill{
@@ -108,13 +117,13 @@
 }
 
 .cerebro_izq{
-  animation: draw_izq 3s linear forwards, brillo_svg 2s 4s infinite;  
+  animation: draw_izq 3s 3s linear forwards, brillo_svg 2s 6s infinite;  
 }
 .cerebro_derch{
-  animation: draw_derch 3s linear forwards, brillo_svg 2s 4s infinite;  
+  animation: draw_derch 6s 6s linear forwards, brillo_svg 2s 6s infinite;  
 }
 .cerebro_abajo{
-  animation: draw_derch 3s linear forwards;
+  animation: draw_derch 5s 3s linear forwards;
 }
 
 .cerebro_derch,.cerebro_abajo{
@@ -125,7 +134,10 @@
   /* stroke: rgb(255, 254, 254); */
 }
 .cerebro_izq{
-  fill-opacity: 1; 
+  fill-opacity: 0; 
+  stroke-width: 18px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 80000;
 }
 .cerebro_neuronas{
   fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
@@ -137,12 +149,28 @@
 
 
 /* --------------Animations---------------- */
+@keyframes section_zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
 @keyframes draw_izq {
   0%{
+     fill-opacity: 0; 
       stroke: rgb(255, 254, 254);
       stroke-dashoffset: 80000;
   }
+  40%{
+    fill-opacity: 0; 
+  }
   100%{
+     fill-opacity: 1; 
       stroke: rgb(255, 254, 254);
       stroke-dashoffset: 0;
   }
