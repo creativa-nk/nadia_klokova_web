@@ -75,7 +75,7 @@
     transform: translateY(-200vh);
     transition: transform 0.3s;
     /* animation: aparece_circulo 2s cubic-bezier(.7,1,.7,.9) */ /* forwards */ /* infinite */;
-    animation: ballBouncing 2.5s 28.5s linear forwards;
+    animation: ballBouncing 2.5s 7s linear forwards;
     z-index: 100;
     cursor: pointer;
 }
@@ -92,7 +92,7 @@
     justify-content: space-evenly;
     align-items: center;
     opacity: 0;
-    animation: bounceIn .3s 31.5s linear forwards ;
+    animation: bounceIn .3s 11s linear forwards ;
 }
 
 .menu {
