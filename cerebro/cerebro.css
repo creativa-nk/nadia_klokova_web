@@ -117,13 +117,13 @@
 }
 
 .cerebro_izq{
-  animation: draw_izq 3s 3s linear forwards, brillo_svg 2s 6s infinite;  
+  animation: draw_izq 3s .5s linear forwards, brillo_svg 2s 5s infinite;  
 }
 .cerebro_derch{
-  animation: draw_derch 6s 6s linear forwards, brillo_svg 2s 6s infinite;  
+  animation: draw_derch 3s .4s linear forwards, brillo_svg 2s 5s infinite;  
 }
 .cerebro_abajo{
-  animation: draw_derch 5s 3s linear forwards;
+  animation: draw_derch 4s 1s linear forwards;
 }
 
 .cerebro_derch,.cerebro_abajo{
