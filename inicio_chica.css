@@ -1,0 +1,319 @@
+#inicio{
+    width: 100%;
+    height: 100%;
+  }
+.container_chica{
+    /* background: rgba(255, 0, 0, 0.294); */
+    width: 1000px;
+    height: 800px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 4rem;
+    left: 30%;
+  }
+  .section-img{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    animation: bounceIn 1s 6s forwards ;
+  }
+  .window{
+    position: absolute;
+    margin: 1em;
+    z-index: -1;
+    width: 80%;
+    height: 70%;
+    /* background: rgb(53, 83, 137); */
+    border-radius: 33% 40% 60% 20% / 60% 40% 45% 25%;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.164),
+      inset 0.2rem -0.2rem 0.5rem rgba(0, 0, 0, 0.16);
+    /*see animation down */
+  }
+  .sillon{
+    bottom: 0;
+    z-index: 0;
+   /*see animation down */
+  }
+  .sillon_delante{
+    bottom: 0;
+    z-index: 2;
+   /*see animation down */
+  }
+  .chica{
+    bottom: 0;
+    z-index: 1;
+   /*see animation down */
+  }
+  .container_bocadillo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    width: auto;
+    top: 40%;
+    right: 40%; 
+    transition: animation  .7s;
+    /*see animation down */
+  }
+  .container_bocadillo,.container_bocadillo::after,.container_bocadillo::before{
+    background: rgb(255, 255, 255);
+    box-shadow: -1px 6px 3px rgba(50, 50, 0, 0.2);
+    border-radius: 10px;
+    position: absolute ;
+    z-index: 1;
+    opacity: 0;
+  }
+  
+  .container_bocadillo::after{
+    content: '';
+    width: 2em;
+    height: .7em;
+    top: 110%;
+    right: 12%;
+    /*see animation down */
+  }
+  .container_bocadillo::before{
+    content: '';
+    width: .7em;
+    height: .7em;
+    border-radius: 50%;
+    top: 130%;
+    right: 6%;
+    /*see animation down */
+  }
+  .bocadillo p {
+    color: #774f38;
+    font-family: "Baloo 2", cursive;
+    font-weight: bold;
+    /* font-family: monospace; */
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s 25s steps(30, end),
+      blink-caret .5s 25s step-end infinite;
+  }
+  
+  
+  
+  /* ----------------------------ANIMACIONES---------------------------- */
+  @keyframes bg_window{
+    0%{
+      background:rgb(0, 14, 54);
+    }
+    40%{
+        background:rgb(123, 220, 255) ;
+    }
+    100%{
+      background:rgb(0, 14, 54);
+    }
+  }
+  
+  
+  @keyframes fadeInDownBig {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -2000px, 0);
+      transform: translate3d(0, -2000px, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes shakeX {
+    from,
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translate3d(-10px, 0, 0);
+      transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+    }
+  }
+  
+  @keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9);
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: scale3d(1.03, 1.03, 1.03);
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+      -webkit-transform: scale3d(0.97, 0.97, 0.97);
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  
+  @keyframes appear {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+  
+  
+  /*-------------- MediaQuery-------------- */
+  
+  @media only screen and (min-width: 768px) and ( orientation: portrait){
+    .container_chica{
+      /* background: rgba(234, 0, 255, 0.294); */
+      width: 900px;
+      height: 800px;
+      position: absolute;
+      top: 2.5rem;
+      right: 200px;
+    }
+     
+  }
+  
+  
+  @media only screen and (max-width:450px) and ( orientation: portrait){ 
+  
+    body{
+      overflow: hidden;
+    }
+    .container_chica{
+      /* background: rgba(234, 0, 255, 0.294); */
+      width: 100vw;
+      height: 600px;
+      position: absolute;
+      top: 5rem;
+      left: 0;
+    }
+    .planta{
+      width: 160%;
+      bottom: 2rem;
+    }
+    .chica{
+      width: 100%;
+      right: 0;
+      bottom: 2rem;
+    }
+    .sillon{
+     right: 0;
+     width: 150%;
+     bottom: 2rem;
+     filter: drop-shadow(2px 0px 3px rgba(50, 50, 0, 0.2));
+    }
+    .sillon_delante{
+      right: 0;
+      width: 150%;
+      bottom: 2rem;
+    }
+    .container_bocadillo{
+      top: 47%;
+      right: 45%;
+      padding: 1em;
+    }
+    .bocadillo p {
+      font-size: 0.7em;
+    }
+    .container_bocadillo::after{
+      width: 1em;
+      height: .3em;
+      top: 115%;
+    }
+    .container_bocadillo::before{
+      width: .3em;
+      height: .3em;
+      top: 137%;
+    }
+  }
+  
+  /*------------- Animations------------- */
+  
+  
+  .section-img{
+    animation: bounceIn 1s 6s forwards ;
+  }
+  .sillon{
+    animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
+  }
+  .sillon_delante{
+    animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
+  }
+  .window{
+    animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite;
+  }
+  .chica{
+    animation-delay: 16.8s;
+  }
+  .container_bocadillo{
+    animation: appear 0.7s 25s forwards;
+  }
+  .container_bocadillo::after{
+    animation: appear 0.7s 25.5s forwards;
+  }
+  .container_bocadillo::before{
+    animation: appear 0.7s 26s forwards;
+  }
+  
+  
+  /* .container_bocadillo,.container_bocadillo::after,.container_bocadillo::before{
+    animation: bounceIn 1s 19s forwards ;
+  } */
+  
+  /* .bocadillo p {
+    animation: 
+      typing 3.5s 19s steps(30, end),
+      blink-caret .5s 19s step-end infinite;
+  } */

@@ -6,18 +6,23 @@
     box-sizing: border-box;
 }
 
-#cv{
+#curriculum{
+  width: 100vw;
+  height: 100vh; 
+  /* animation: section_zoomIn 1s linear ;  */
+}
+.wraper_cv{
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background: rgb(131, 204, 243);
-  width: 100vw;
-  height: 100vh;
   color: white;
   font-family: 'Jost', sans-serif;
   text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.2);
   font-size: 1.6rem;
-  font-weight: bold;  
+  font-weight: bold; 
 }
 .skills, .soft_skills{
   background: rgb(95, 192, 245);
@@ -32,7 +37,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.skills .titulo, .soft_skills .titulo{
+.skills .titulo,.soft_skills .titulo {
   text-transform: uppercase;
   font-size: 1.7rem;
   letter-spacing: 0px;
@@ -40,6 +45,14 @@
   color: #fbdc12;
   margin-top: 2rem;
 }
+.skills.titulo .letra{
+  animation: waviy 1.5s both;
+
+}
+.soft_skills.titulo .letra{
+  animation: waviy 1.5s both;
+}
+
 .skill{
   /* background: cornflowerblue; */
   display: flex;
@@ -85,57 +98,74 @@
   width: 100%;
   height: 100%;
 }
-.brillo{
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 37%;
-  opacity: 0;
-  background:rgba(253, 253, 219, 0.8);
-  border-radius: 50%;
-  box-shadow: 0 0 25px rgba(253, 253, 219, 0.8);
-  animation: brillo 10s 3s forwards;
-}
 
-.container_cerebro_svg{
-  position: absolute;
- /*  background: chartreuse; */
- width: 900px;
- height: 100vh;
+.container_svg{
+  /* background: chartreuse; */
+  width: 900px;
+  height: 100vh;
 }
 #cerebro_svg{
-  /* background: rgba(255, 0, 0, 0.37); */
-/*  position: absolute;
- top: 0;
- left: 0; */
+ /*  background: rgba(255, 0, 0, 0.37); */
   z-index: 1;
   width: 70%;
   height: 70%;
 }
 
 .cerebro_izq{
-  animation: draw_izq 3s linear forwards;  
+  animation: draw_izq 3s .5s linear forwards, brillo_svg 2s 5s infinite;  
 }
 .cerebro_derch{
-  animation: draw_derch 3s linear forwards;  
+  animation: draw_derch 3s .5s linear forwards, brillo_svg 2s 5s infinite;  
+}
+.cerebro_abajo{
+  animation: draw_derch 3.5s .2s linear forwards;
 }
 
-.cerebro_izq,.cerebro_derch{
+.cerebro_derch,.cerebro_abajo{
   fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
   stroke-width: 18px;
   stroke-dashoffset: 0;
   stroke-dasharray: 80000;
   /* stroke: rgb(255, 254, 254); */
 }
+.cerebro_izq{
+  fill-opacity: 0; 
+  stroke-width: 18px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 80000;
+}
+.cerebro_neuronas{
+  fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
+  stroke-width: 18px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 80;
+  animation: draw_derch 3s 3s linear infinite,brillo_svg 2s 4s infinite;
+}
 
 
 /* --------------Animations---------------- */
+@keyframes section_zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
 @keyframes draw_izq {
   0%{
+     fill-opacity: 0; 
       stroke: rgb(255, 254, 254);
       stroke-dashoffset: 80000;
   }
+  40%{
+    fill-opacity: 0; 
+  }
   100%{
+     fill-opacity: 0.4; 
       stroke: rgb(255, 254, 254);
       stroke-dashoffset: 0;
   }
@@ -152,19 +182,24 @@
   }
 }
 
-@keyframes brillo{
+ 
+@keyframes brillo_svg{
+/*   0%,80%{
+    -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) ;
+            filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+  } */
   0%{
-    opacity: 0;
-    box-shadow: 0 0 25px rgba(253, 253, 219, 0.8);
-  }
-  30%{
-    opacity: 1;
+    -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 40px #0ba9ca) 
+    drop-shadow(0 0 50px #ffffff) drop-shadow(0 0 70px rgba(255, 255, 255, 0.15));
+            filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 40px #0ba9ca) 
+            drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 70px rgba(255, 255, 255, 0.15));
   }
   100%{
-    opacity: 1;
-    box-shadow: 0 0 25px rgba(253, 253, 219, 0.8),
-    0 0 1px 15px rgba(253, 253, 219, 0.8), 0 0 1px 40px rgba(253, 253, 219, 0.3),
-    0 0 1px 90px rgba(253, 253, 219, 0.2), 0 0 1px 160px rgba(253, 253, 219, 0.1); 
+    -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.616)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.459)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.349)) drop-shadow(0 0 40px #0ba9ca) 
+    drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 90px rgba(255, 255, 255, 0.216));
+            filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.616)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.459)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.349)) drop-shadow(0 0 40px #0ba9ca) 
+            drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 90px rgba(255, 255, 255, 0.216));
+  
   }
 }
 
@@ -173,7 +208,7 @@
 
 /* ----------------MediaQuery----------------- */
 @media only screen and (max-width:768px){
-  .cerebro{
+  .wraper_cv{
     flex-direction: column;
     justify-content: space-between;
   }
@@ -182,13 +217,23 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
   .soft_skills{
    position: relative;
+  }
+  .soft_skills p{
+    margin-top: .4rem;
+  }
+  .titulo_skills span {
+    font-size: 1.3rem;
+    font-weight: bolder;
+  }
+  .container_languages{
+    margin-top: 3.5rem;
   }
   .container_svg{
     margin: 0 auto;
@@ -204,7 +249,13 @@
     width: 300px;
     height: 300px;
   }
+  .brillo{
+    width: 50px;
+    height: 10px;
+    top: 40%;
+  }
   #cerebro_svg{
+    /* background: #fbdc12; */
     width: 100%;
     height: 100%;
   }
@@ -228,6 +279,28 @@
     margin-top: .2rem;
   }
 
+}
+
+@media only screen and (max-width:425px){
+  .cerebro_neuronas{
+    stroke-width: 22px;
+    stroke-dasharray: 90;
+    animation: draw_derch_neuronas 3s 3s linear infinite,brillo_svg 2s 4s infinite;
+  }
+
+  .wraper_cv{
+    text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.4);
+  }
 
 
+    @keyframes draw_derch_neuronas {
+        0%{
+            stroke: rgb(255, 254, 254);
+            stroke-dashoffset: -2000;
+        }
+        100%{
+            stroke: rgb(255, 254, 254);
+            stroke-dashoffset: 0;
+        }
+    }
 }

@@ -16,12 +16,11 @@ html, body{
 
 .container_texto{
   /* background: coral; */
-  /* font-family: 'Baloo Paaji', cursive; */
   font-family: 'Jost', sans-serif;
   width: 400px;
   height: 350px;
-  position: relative;
-  top: 10%;
+  position: relative;/* ????????????????????????? */
+  top: 5rem;
   left: 15%;
 }
 

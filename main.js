@@ -9,6 +9,22 @@ btn.addEventListener('click',() =>{
 background.classList.toggle('active');
 menu.classList.toggle('active');
 contact.classList.toggle('active');
+})
+
+/* function toggleMenu(){
+  if(background.classList.contains('active')){
+      closeNav()
+  }else{
+    background.classList.add('active');
+    menu.classList.add('active');
+    contact.classList.add('active')
+  }
+} */
+
+function closeNav(){
+  background.classList.remove('active');
+  menu.classList.remove('active');
+}
 
 
 let glowInTexts = document.querySelectorAll(".glowIn");
@@ -23,7 +39,12 @@ glowInTexts.forEach(glowInText => {
   });
 });
 
-} )
+
+/* btn_cerrar = $(".navegar li")
+
+btn_cerrar.on('click',function(){
+  background.removeClass("active"); */ /*  cierra menu dando a cualquier opcion del menu */
+/* }) */
 
 
 /* ---------------pestañas-----------------tabs-------------- */
@@ -40,5 +61,8 @@ targets.forEach(target =>{
         t.classList.add('active') 
     })
 })
+/* --------------------------------------------------------- */
+
+
 
 
