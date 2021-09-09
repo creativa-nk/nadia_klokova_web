@@ -117,12 +117,15 @@
   animation: draw_derch 3s linear forwards;
 }
 
-.cerebro_izq,.cerebro_derch,.cerebro_abajo{
+.cerebro_derch,.cerebro_abajo{
   fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
   stroke-width: 18px;
   stroke-dashoffset: 0;
   stroke-dasharray: 80000;
   /* stroke: rgb(255, 254, 254); */
+}
+.cerebro_izq{
+  fill-opacity: 1; 
 }
 .cerebro_neuronas{
   fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
@@ -158,21 +161,21 @@
 
  
 @keyframes brillo_svg{
-  0%,80%{
+/*   0%,80%{
     -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) ;
             filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
-  }
-  20%{
+  } */
+  0%{
     -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 40px #0ba9ca) 
-    drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 80px rgba(255, 255, 255, 0.15));
+    drop-shadow(0 0 50px #ffffff) drop-shadow(0 0 70px rgba(255, 255, 255, 0.15));
             filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 40px #0ba9ca) 
-            drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 80px rgba(255, 255, 255, 0.15));
+            drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 70px rgba(255, 255, 255, 0.15));
   }
   100%{
     -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.616)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.459)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.349)) drop-shadow(0 0 40px #0ba9ca) 
-    drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 100px rgba(255, 255, 255, 0.216));
+    drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 90px rgba(255, 255, 255, 0.216));
             filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.616)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.459)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.349)) drop-shadow(0 0 40px #0ba9ca) 
-            drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 100px rgba(255, 255, 255, 0.216));
+            drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 90px rgba(255, 255, 255, 0.216));
   
   }
 }
@@ -252,6 +255,23 @@
     margin-top: .2rem;
   }
 
+}
+
+@media only screen and (max-width:425px){
+  .cerebro_neuronas{
+    stroke-width: 22px;
+    stroke-dasharray: 90;
+    animation: draw_derch_neuronas 3s 3s linear infinite,brillo_svg 2s 4s infinite;
+  }
 
 
+@keyframes draw_derch_neuronas {
+  0%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: -2000;
+  }
+  100%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 0;
+  }
 }
