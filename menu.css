@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
 }
 .navegar li{
     text-shadow: 3px 3px 0 rgba(0, 0, 0, .2);
@@ -67,7 +68,7 @@
     align-items: center;
     transform: translateY(-200vh);
     transition: transform 0.3s;
-    /* animation: aparece_circulo 2s cubic-bezier(.7,1,.7,.9) */ /* forwards */ /* infinite */;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* para borrar el recuadro azul que aparece por defecto con onclick */
     animation: ballBouncing 2.5s 7s linear forwards;
     z-index: 100;
     cursor: pointer;
@@ -136,16 +137,14 @@
 
 /*------------------------- CONTACTO--------------------- */
 
-
-
 .container_contact{
   /* background: #00fff2; */
-  width: 100%;
-  height: 100%;
+  width: 300px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   opacity: 0;
+  font-size: 2rem;
 }
 .container_contact.active{
   animation: bounceIn .7s 1s forwards;
@@ -156,14 +155,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2rem;
   outline:none;
   text-decoration:none;
   color:rgb(255, 255, 255);
   background:rgba(10, 10, 10, 0.2);
-  width:8rem;
-  height:8rem;
-  border:none;
+  width:4rem;
+  height:4rem;
   border-radius:50%;
   box-shadow:5px 5px 10px rgba(50, 50, 0, 0.2) ,-5px -5px 10px rgba(255,255,255,0.1); 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* para borrar el recuadro azul que aparece por defecto con onclick */
@@ -178,29 +176,6 @@
 
 
 
-@media all and (max-width:1440px){
-  .contact{
-      width: 3rem;
-      height: 3rem;
-      margin-top:30%;
-  }
-}
-
-
-@media all and (max-width:768px){
-    .container_contact{
-        flex-direction: row;
-        height: 100vh;
-        align-items: center;
-        justify-content: center;
-    }
-    .contact{
-        height: 3rem;
-        width: 3rem;
-        font-size: 1rem;
-        margin-left:1rem;
-    }
-}
   
   
   
@@ -280,6 +255,27 @@
   }
 
   /*-------------- MediaQuery-------------- */
+    
+  @media all and (max-width:1440px){
+    .contact{
+        width: 3rem;
+        height: 3rem;
+        margin-top:30%;
+    }
+  }
+
+
+  @media all and (max-width:768px){
+      .container_contact{
+        width: 220px;
+      }
+      .contact{
+          height: 3rem;
+          width: 3rem;
+          font-size: 1.5rem;
+          margin-left:1.5rem;
+      }
+  }
 
   @media only screen and (max-width:450px) and ( orientation: portrait){
 
