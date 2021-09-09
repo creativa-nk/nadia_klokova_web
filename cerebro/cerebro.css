@@ -47,11 +47,10 @@
 }
 .skills.titulo .letra{
   animation: waviy 1.5s both;
-  animation-delay:3s;
+
 }
 .soft_skills.titulo .letra{
   animation: waviy 1.5s both;
-  animation-delay:3s;
 }
 
 .skill{
@@ -101,15 +100,12 @@
 }
 
 .container_svg{
-  background: chartreuse;
+  /* background: chartreuse; */
   width: 900px;
   height: 100vh;
 }
 #cerebro_svg{
-  background: rgba(255, 0, 0, 0.37);
-/*  position: absolute;
- top: 0;
- left: 0; */
+ /*  background: rgba(255, 0, 0, 0.37); */
   z-index: 1;
   width: 70%;
   height: 70%;
@@ -119,10 +115,10 @@
   animation: draw_izq 3s .5s linear forwards, brillo_svg 2s 5s infinite;  
 }
 .cerebro_derch{
-  animation: draw_derch 3s .4s linear forwards, brillo_svg 2s 5s infinite;  
+  animation: draw_derch 3s .5s linear forwards, brillo_svg 2s 5s infinite;  
 }
 .cerebro_abajo{
-  animation: draw_derch 4s 1s linear forwards;
+  animation: draw_derch 3.5s .2s linear forwards;
 }
 
 .cerebro_derch,.cerebro_abajo{
@@ -169,7 +165,7 @@
     fill-opacity: 0; 
   }
   100%{
-     fill-opacity: 1; 
+     fill-opacity: 0.4; 
       stroke: rgb(255, 254, 254);
       stroke-dashoffset: 0;
   }
@@ -234,6 +230,7 @@
   }
   .titulo_skills span {
     font-size: 1.3rem;
+    font-weight: bolder;
   }
   .container_languages{
     margin-top: 3.5rem;
@@ -291,14 +288,19 @@
     animation: draw_derch_neuronas 3s 3s linear infinite,brillo_svg 2s 4s infinite;
   }
 
+  .wraper_cv{
+    text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.4);
+  }
 
-@keyframes draw_derch_neuronas {
-  0%{
-      stroke: rgb(255, 254, 254);
-      stroke-dashoffset: -2000;
-  }
-  100%{
-      stroke: rgb(255, 254, 254);
-      stroke-dashoffset: 0;
-  }
+
+    @keyframes draw_derch_neuronas {
+        0%{
+            stroke: rgb(255, 254, 254);
+            stroke-dashoffset: -2000;
+        }
+        100%{
+            stroke: rgb(255, 254, 254);
+            stroke-dashoffset: 0;
+        }
+    }
 }
