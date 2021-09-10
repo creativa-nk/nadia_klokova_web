@@ -1,10 +1,10 @@
 .sillonConChica{
 /*  background: salmon; */
- height: 500px;
- width: 500px;
- position: absolute;
- bottom: 0;
- right: 0;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 #sillon_svg{
@@ -42,13 +42,22 @@
     stroke-dasharray: 80000;
 }
 .sillon_uno{
+    -moz-animation: draw 6s 11s ease-in-out forwards; /* Firefox */
+    -webkit-animation: draw 6s 11s ease-in-out forwards; /* Safari and Chrome */
+    -o-animation: draw 6s 11s ease-in-out forwards; /* Opera */
     animation: draw 6s 11s ease-in-out forwards;
 }
 .sillon_dos{
+    -moz-animation: draw 6s 11.5s ease-in-out forwards; /* Firefox */
+    -webkit-animation: draw 6s 11.5s ease-in-out forwards; /* Safari and Chrome */
+    -o-animation: draw 6s 11.5s ease-in-out forwards; /* Opera */
     animation: draw 6s 11.5s ease-in-out forwards;  
 }
 
 .planta_baja{
+    -moz-animation: draw 4s 13s linear forwards; /* Firefox */
+    -webkit-animation: draw 4s 13s linear forwards; /* Safari and Chrome */
+    -o-animation: draw 4s 13s linear forwards; /* Opera */
     animation: draw 4s 13s linear forwards;  
 }
 /* ---------------------CONTACTO-------------- */
@@ -88,6 +97,8 @@
         stroke-dashoffset: 0;
     }
 }
+
+  /*-------------- MediaQuery-------------- */
 
 @media only screen and (max-width:450px){
     #sillon_svg{

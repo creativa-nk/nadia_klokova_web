@@ -6,20 +6,33 @@
     box-sizing: border-box;
 }
 
+#about_me{
+  width: 100vw;
+  height: 100vh;
+  /* background: rosybrown; */
+}
+
 .about_me{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background: rgb(140, 206, 241); */
-  background: rgb(67, 173, 243);
+  /* background: rgb(140, 206, 241); */ /* azul-claro */
+  /* background: rgb(67, 173, 243); */ /* azul-mas oscuro */
+ /*  background: rgb(24, 52, 146); */
+  /* background:rgb(12, 35, 98); */
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   color: white;
   font-family: 'Jost', sans-serif;
   text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.2);
   font-size: 1.6rem;
-  font-weight: bold;  
+  font-weight: bold; 
+  -moz-animation: bg_about_me 11s forwards; /* Firefox */
+  -webkit-animation: bg_about_me 11s forwards; /* Safari and Chrome */
+  -o-animation: bg_about_me 11s forwards; /* Opera */
+  animation: bg_about_me 11s forwards; 
 }
 
 .titulo{
@@ -32,6 +45,9 @@
   position: relative;
   display: inline-block;
   opacity: 0;
+  -moz-animation: waviy 1s 2s both; /* Firefox */
+  -webkit-animation: waviy 1s 2s both; /* Safari and Chrome */
+  -o-animation: waviy 1s 2s both; /* Opera */
   animation: waviy 1s 2s both;
   animation-delay: calc(.1s * var(--i))
 }
@@ -41,19 +57,20 @@
     height: auto;
 }
 .container_text p{
-    margin-top: 1.2rem;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
-    transform: translateY(-50px);
-    opacity: 0;
-    -moz-animation:sectionAnimation 5s  forwards; /* Firefox */
-    -webkit-animation:sectionAnimation 5s  forwards; /* Safari and Chrome */
-    -o-animation:sectionAnimation 5s  forwards; /* Opera */
-    animation:sectionAnimation 5s  forwards;
+  margin-top: 1.2rem;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
+  transform: translateY(-50px);
+  opacity: 0;
+  -moz-animation:sectionAnimation 5s  forwards; /* Firefox */
+  -webkit-animation:sectionAnimation 5s  forwards; /* Safari and Chrome */
+  -o-animation:sectionAnimation 5s  forwards; /* Opera */
+  animation:sectionAnimation 5s  forwards;
 }
 .container_text a{
   text-decoration: none; 
-  color: rgb(0, 17, 255);
+  color: #ffe221;
+  /* color: rgb(0, 17, 255); */
 }
 .container_text a:hover{
     color: rgba(129, 141, 163, 0.7);
@@ -70,6 +87,14 @@
 
 /* -------------------Animations----------------------- */
 
+@keyframes bg_about_me {
+  0%,50%{
+    background: rgb(67, 173, 243);
+  }
+  100%{
+    background:rgb(0, 20, 73);
+  }
+}
 
 @keyframes sectionAnimation {
   0% {
@@ -86,10 +111,10 @@
 }
 
 100% {
-  transform: translateY(0);
-  opacity: 1;
- -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
- clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
   
  }
 }
@@ -98,14 +123,17 @@
 @keyframes waviy {
   0%{
     opacity: 0;
-    transform: translateY(0)
+    transform: translateY(0);
+    -webkit-transform:translateY(0);
   }
   40%,100% {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
+    -webkit-transform:translateY(0);
   }
   20% {
-    transform: translateY(-20px)
+    transform: translateY(-20px);
+    -webkit-transform:translateY(-20px);
   }
   
 }
@@ -118,6 +146,8 @@
     opacity: 1;
   }
 }
+
+
 
 /* ---------------MediaQuery---------------- */
 
@@ -148,3 +178,171 @@
     font-size: 2rem;
   }
 }
+
+
+
+/* --------------ROCKET------------------- */
+
+@keyframes flicker {
+  0% {
+    transform: rotate(-1deg);
+    -webkit-transform:rotate(-1deg);
+  }
+  20% {
+    transform: rotate(3deg) scaleY(1.05);
+    -webkit-transform:rotate(3deg) scaleY(1.05);
+  }
+  60% {
+    transform: rotate(1deg);
+    -webkit-transform:rotate(1deg);
+  }
+  80% {
+    transform: rotate(-1deg) scaleY(0.9);
+    -webkit-transform: rotate(-1deg) scaleY(0.9);
+  }
+  100% {
+    transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+  }
+}
+
+@keyframes rocket_launch {
+  100%{
+    transform: translateY(-1300px);
+    -webkit-transform: translateY(-1300px);
+  }
+}
+
+@keyframes flame {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.6;
+    transform: translateY(-1300px);
+    -webkit-transform:translateY(-1300px);
+  }
+}
+
+@keyframes draw {
+  0%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 40000;
+  }
+  100%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 0;
+  }
+}
+
+
+.container_rocket {
+  /* background: rgba(255, 0, 0, 0.452); */
+  position: absolute;
+  bottom:.5rem;
+  right: 0;
+  width: 100px;
+  height: 90px;
+}
+.rocket{
+  fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
+  stroke-width: 30px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 40000;
+}
+#rocket_svg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  -moz-animation: rocket_launch 12s 12.5s infinite; /* Firefox */
+  -webkit-animation: rocket_launch 12s 12.5s infinite; /* Safari and Chrome */
+  -o-animation: rocket_launch 12s 12.5s infinite; /* Opera */
+  animation: rocket_launch 12s 12.5s infinite ;
+}
+
+.rocket{
+  -moz-animation: draw 4s 8s linear both; /* Firefox */
+  -webkit-animation: draw 4s 8s linear both; /* Safari and Chrome */
+  -o-animation: draw 4s 8s linear both; /* Opera */
+  animation: draw 4s 8s linear both;  
+}
+
+.rocket-wrapper {
+ /*  background: rgba(187, 188, 143, 0.671); */
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  bottom: 0;
+  left:0;
+  transition: 4s ease;
+  pointer-events: none;
+}
+.rocket-wrapper .flame-wrapper {
+  position: absolute;
+  opacity: 0;
+  transition: 250ms ease;
+  -moz-animation: flame 12s 12.5s  infinite; /* Firefox */
+  -webkit-animation: flame 12s 12.5s  infinite; /* Safari and Chrome */
+  -o-animation: flame 12s 12.5s  infinite; /* Opera */
+  animation: flame 12s 12.5s  infinite;
+}
+/* ------------FLAME------------- */
+.flame-wrapper{
+  width: 10px;
+  height: 40px;
+  left: 20%;
+  bottom: -50%;
+}
+.flame {
+  position: absolute;
+  width: 20%;
+  border-radius: 50% 50% 50% 0%  ;
+  transform: rotate(-45deg);
+}
+
+.red {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 68, 0, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(255, 68, 0, 0.4);
+}
+.orange {
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 166, 0, 0.5);
+  box-shadow: 0px 0px 12px 6px rgba(255, 166, 0, 0.4);
+}
+.gold {
+  left: 18px;
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 217, 0, 0.5);
+  box-shadow: 0px 0px 9px 4px rgba(255, 217, 0, 0.4);
+}
+.white {
+  left: 22px;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 224, 0.5);
+  box-shadow: 0px 0px 9px 4px rgba(255, 255, 224, 0.4);
+}
+.flame-anim {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -moz-animation: flicker 3ms ease-in infinite; /* Firefox */
+  -webkit-animation: flicker 3ms ease-in infinite; /* Safari and Chrome */
+  -o-animation: flicker 3ms ease-in infinite; /* Opera */
+  animation: flicker 3ms ease-in infinite;
+}
+
+@media only screen and (max-width:450px) and ( orientation: portrait){ 
+
+
+}
+

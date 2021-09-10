@@ -16,6 +16,9 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
+    -moz-animation:bounceIn 1s 6s forwards; /* Firefox */
+    -webkit-animation:bounceIn 1s 6s forwards; /* Safari and Chrome */
+    -o-animation:bounceIn 1s 6s forwards; /* Opera */
     animation: bounceIn 1s 6s forwards ;
   }
   .window{
@@ -95,6 +98,12 @@
     animation: 
       typing 3.5s 25s steps(30, end),
       blink-caret .5s 25s step-end infinite;
+      -moz-animation: typing 3.5s 25s steps(30, end),
+      blink-caret .5s 25s step-end infinite; /* Firefox */
+      -webkit-animation: typing 3.5s 25s steps(30, end),
+      blink-caret .5s 25s step-end infinite; /* Safari and Chrome */
+      -o-animation: typing 3.5s 25s steps(30, end),
+      blink-caret .5s 25s step-end infinite; /* Opera */
   }
   
   
@@ -200,14 +209,22 @@
   
   /* The typing effect */
   @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+       width: 0
+       }
+    to {
+       width: 100% 
+      }
   }
   
   /* The typewriter cursor effect */
   @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
+    from, to { 
+      border-color: transparent
+     }
+    50% {
+       border-color: orange
+     }
   }
   
   
@@ -283,27 +300,48 @@
   
   
   .section-img{
+    -moz-animation:bounceIn 1s 6s forwards ; /* Firefox */
+    -webkit-animation:bounceIn 1s 6s forwards ; /* Safari and Chrome */
+    -o-animation:bounceIn 1s 6s forwards ; /* Opera */
     animation: bounceIn 1s 6s forwards ;
   }
   .sillon{
+    -moz-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Firefox */
+    -webkit-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Safari and Chrome */
+    -o-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Opera */
     animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
   }
   .sillon_delante{
+    -moz-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Firefox */
+    -webkit-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Safari and Chrome */
+    -o-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Opera */
     animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
   }
   .window{
+    -moz-animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite; /* Firefox */
+    -webkit-animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite; /* Safari and Chrome */
+    -o-animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite; /* Opera */
     animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite;
   }
   .chica{
     animation-delay: 16.8s;
   }
   .container_bocadillo{
+    -moz-animation:appear 0.7s 25s forwards; /* Firefox */
+    -webkit-animation:appear 0.7s 25s forwards; /* Safari and Chrome */
+    -o-animation:appear 0.7s 25s forwards; /* Opera */
     animation: appear 0.7s 25s forwards;
   }
   .container_bocadillo::after{
+    -moz-animation:appear 0.7s 25.5s forwards; /* Firefox */
+    -webkit-animation:appear 0.7s 25.5s forwards; /* Safari and Chrome */
+    -o-animation:appear 0.7s 25.5s forwards; /* Opera */
     animation: appear 0.7s 25.5s forwards;
   }
   .container_bocadillo::before{
+    -moz-animation:appear 0.7s 26s forwards; /* Firefox */
+    -webkit-animation:appear 0.7s 26s forwards; /* Safari and Chrome */
+    -o-animation:appear 0.7s 26s forwards; /* Opera */
     animation: appear 0.7s 26s forwards;
   }
   
