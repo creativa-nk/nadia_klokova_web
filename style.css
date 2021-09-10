@@ -22,11 +22,7 @@ html{
   display: block;
 }
 /* ----------------------------------------------------------------- */
-#about_me{
-  width: 100vw;
-  height: 100vh;
-  background: rosybrown;
-}
+
 #inicio{
   width: 100vw;
   height: 100vh;

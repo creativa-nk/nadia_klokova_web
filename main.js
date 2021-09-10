@@ -61,7 +61,12 @@ targets.forEach(target =>{
         t.classList.add('active') 
     })
 })
-/* --------------------------------------------------------- */
+/* ------------------ROCKET--------------------------------------- */
+
+function launchRocket() {
+  document.getElementById("rocket").classList.add("rocket-launched");
+}
+
 
 
 
