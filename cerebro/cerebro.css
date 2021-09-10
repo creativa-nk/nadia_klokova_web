@@ -112,13 +112,13 @@
 }
 
 .cerebro_izq{
-  animation: draw_izq 3s .5s linear forwards, brillo_svg 2s 5s infinite;  
+  animation: draw_izq 3s 2s linear forwards, brillo_svg 2s 4s infinite;  
 }
 .cerebro_derch{
-  animation: draw_derch 3s .5s linear forwards, brillo_svg 2s 5s infinite;  
+  animation: draw_derch 3s linear forwards, brillo_svg 2s 4s infinite;  
 }
 .cerebro_abajo{
-  animation: draw_derch 3.5s .2s linear forwards;
+  animation: draw_derch 4s linear forwards;
 }
 
 .cerebro_derch,.cerebro_abajo{
@@ -139,7 +139,7 @@
   stroke-width: 18px;
   stroke-dashoffset: 0;
   stroke-dasharray: 80;
-  animation: draw_derch 3s 3s linear infinite,brillo_svg 2s 4s infinite;
+  animation: draw_derch 5s linear infinite,brillo_svg 2s 8s infinite;
 }
 
 
