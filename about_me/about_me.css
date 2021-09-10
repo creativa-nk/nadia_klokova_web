@@ -29,7 +29,7 @@
   text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.2);
   font-size: 1.6rem;
   font-weight: bold; 
-  animation: bg_about_me 8s forwards; 
+  animation: bg_about_me 11s forwards; 
 }
 
 .titulo{
@@ -82,11 +82,11 @@
 /* -------------------Animations----------------------- */
 
 @keyframes bg_about_me {
-  0%{
+  0%,50%{
     background: rgb(67, 173, 243);
   }
   100%{
-    background:rgb(0, 14, 54);
+    background:rgb(0, 20, 73);
   }
 }
 
@@ -209,7 +209,7 @@
 @keyframes draw {
   0%{
       stroke: rgb(255, 254, 254);
-      stroke-dashoffset: 80000;
+      stroke-dashoffset: 40000;
   }
   100%{
       stroke: rgb(255, 254, 254);
@@ -222,15 +222,15 @@
   /* background: rgba(255, 0, 0, 0.452); */
   position: absolute;
   bottom:.5rem;
-  right: .5rem;
-  width: 90px;
+  right: 0;
+  width: 100px;
   height: 100px;
 }
 .rocket{
   fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
-  stroke-width: 18px;
+  stroke-width: 30px;
   stroke-dashoffset: 0;
-  stroke-dasharray: 80000;
+  stroke-dasharray: 40000;
 }
 #rocket_svg{
   position: absolute;
@@ -238,45 +238,35 @@
   height: 100%;
   top: 0;
   right: 0;
-  /* transform: rotate(-45deg); */
-  animation: rocket_launch 15s 10.5s infinite ;
+  animation: rocket_launch 15s 12.5s infinite ;
 }
 
 .rocket{
-  animation: draw 4s 1s linear forwards;  
+  animation: draw 4s 8s linear both;  
 }
-
-/* .rocket {
-  width: 90px;
-  height: 100px;
-  position: absolute;
-  z-index: 3;
-  animation: rocket_launch 15s 10.5s infinite ;
-} */
 
 .rocket-wrapper {
  /*  background: rgba(187, 188, 143, 0.671); */
   position: absolute;
-  width: 90px;
-  height: 100px;
+  width: 80%;
+  height: 80%;
   top: 0;
-  left: 0;
+  left:0;
   transition: 4s ease;
   pointer-events: none;
 }
-
-
 .rocket-wrapper .flame-wrapper {
   position: absolute;
   opacity: 0;
   transition: 250ms ease;
-  animation: flame 15s 10.5s  infinite;
+  animation: flame 15s 12.5s  infinite;
 }
+/* ------------FLAME------------- */
 .flame-wrapper{
-  width: 50px;
-  height: 50px;
-  left: 23%;
-  bottom: -40%;
+  width: 10px;
+  height: 40px;
+  left: 20%;
+  bottom: -50%;
 }
 .flame {
   position: absolute;
@@ -285,40 +275,44 @@
   transform: rotate(-45deg);
 }
 
-
 .red {
   width: 50px;
   height: 50px;
-  background: orangered;
-  box-shadow: 0px 0px 10px 5px orangered;
+  background: rgba(255, 68, 0, 0.5);
+  box-shadow: 0px 0px 10px 5px rgba(255, 68, 0, 0.4);
 }
 .orange {
   left: 10px;
   width: 30px;
   height: 30px;
-  background: orange;
-  box-shadow: 0px 0px 12px 6px orange;
+  background: rgba(255, 166, 0, 0.5);
+  box-shadow: 0px 0px 12px 6px rgba(255, 166, 0, 0.4);
 }
 .gold {
   left: 18px;
   width: 15px;
   height: 15px;
-  background: gold;
-  box-shadow: 0px 0px 9px 4px gold;
+  background: rgba(255, 217, 0, 0.5);
+  box-shadow: 0px 0px 9px 4px rgba(255, 217, 0, 0.4);
 }
 .white {
   left: 22px;
   width: 5px;
   height: 5px;
-  background: lightyellow;
-  box-shadow: 0px 0px 9px 4px lightyellow;
+  background: rgba(255, 255, 224, 0.5);
+  box-shadow: 0px 0px 9px 4px rgba(255, 255, 224, 0.4);
 }
 .flame-anim {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   bottom: 0;
   left: 0;
   animation: flicker 3ms ease-in infinite;
+}
+
+@media only screen and (max-width:450px) and ( orientation: portrait){ 
+
+
 }
 
