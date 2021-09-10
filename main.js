@@ -24,6 +24,7 @@ contact.classList.toggle('active');
 function closeNav(){
   background.classList.remove('active');
   menu.classList.remove('active');
+  contact.classList.remove('active');
 }
 
 

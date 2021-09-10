@@ -147,7 +147,7 @@
   font-size: 2rem;
 }
 .container_contact.active{
-  animation: bounceIn .7s 1s forwards;
+  animation: bounceIn .7s .6s forwards;
 }
 
 .contact{
