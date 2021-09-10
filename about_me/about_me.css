@@ -192,7 +192,7 @@
 
 @keyframes rocket_launch {
   100%{
-    transform: translateY(-1300px) rotate(-45deg)
+    transform: translateY(-1300px) /* rotate(-45deg) */
   }
 }
 
@@ -238,7 +238,7 @@
   height: 100%;
   top: 0;
   right: 0;
-  transform: rotate(-45deg);
+  /* transform: rotate(-45deg); */
   animation: rocket_launch 15s 10.5s infinite ;
 }
 
