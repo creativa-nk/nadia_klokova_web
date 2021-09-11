@@ -5,7 +5,8 @@
 .background-wrap{
     position: absolute;
     z-index: 50;
-    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+    -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+            filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 .background{
     position: absolute;
@@ -16,14 +17,20 @@
     justify-content: center;
     align-items: center;
     background: #0361b3;
+    transition: -webkit-clip-path 0.6s linear;
     transition: clip-path 0.6s linear;
-    clip-path: circle(0% at 100% 1%);/* circulo */
+    transition: clip-path 0.6s linear, -webkit-clip-path 0.6s linear;
+    -webkit-clip-path: circle(0% at 100% 1%);
+            clip-path: circle(0% at 100% 1%);/* circulo */
 }
   
 .background.active{
+    transition: -webkit-clip-path 0.6s linear;
     transition: clip-path 0.6s linear;
+    transition: clip-path 0.6s linear, -webkit-clip-path 0.6s linear;
     box-shadow: -10px 5px 5px rgba(74, 75, 75, 0.664);
-    clip-path: circle(73.6% at 80% 40%);/* circulo */
+    -webkit-clip-path: circle(73.6% at 80% 40%);
+            clip-path: circle(73.6% at 80% 40%);/* circulo */
 }
 
 .navegar{
@@ -69,7 +76,8 @@
     transform: translateY(-200vh);
     transition: transform 0.3s;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* para borrar el recuadro azul que aparece por defecto con onclick */
-    animation: ballBouncing 2.5s 7s linear forwards;
+    -webkit-animation: ballBouncing 2.5s 7s linear forwards;
+            animation: ballBouncing 2.5s 7s linear forwards;
     z-index: 100;
     cursor: pointer;
 }
@@ -86,7 +94,8 @@
     justify-content: space-evenly;
     align-items: center;
     opacity: 0;
-    animation: bounceIn .3s 10s linear forwards ;
+    -webkit-animation: bounceIn .3s 10s linear forwards ;
+            animation: bounceIn .3s 10s linear forwards ;
 }
 
 .menu {
@@ -145,7 +154,8 @@
   font-size: 2rem;
 }
 .container_contact.active{
-  animation: bounceIn .7s .6s forwards;
+  -webkit-animation: bounceIn .7s .6s forwards;
+          animation: bounceIn .7s .6s forwards;
 }
 
 .contact{
@@ -179,6 +189,16 @@
   
 
 /*-------------- ANIMACIONES----------------- */
+@-webkit-keyframes aparece_hamb {
+    0%{
+      width: 0px;
+      height: 0px;
+    }
+    100%{
+      width: 25px;
+      height: 25px;
+    }
+}
 @keyframes aparece_hamb {
     0%{
       width: 0px;
@@ -187,6 +207,29 @@
     100%{
       width: 25px;
       height: 25px;
+    }
+}
+  
+@-webkit-keyframes aparece_circulo {
+    0%{
+        transform: translateY(-200%);
+        
+    }
+    40%{
+        transform: translateY(0%);  
+    }
+    50%{
+      transform: translateY(-5%); 
+    }
+    80%{
+        transform: translateY(-20%); 
+  
+    }
+    90%{
+      transform: translateY(-5%); 
+    }
+    100%{
+        transform: translateY(0%);  
     }
 }
   
@@ -213,6 +256,22 @@
     }
 }
 
+@-webkit-keyframes glow-in {
+    from {
+      opacity: 0;
+    }
+    50%{
+      opacity: 0;
+    }
+    65% {
+      opacity: 1;
+      text-shadow: 0 0 25px white;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
 @keyframes glow-in {
     from {
       opacity: 0;
@@ -228,6 +287,29 @@
       opacity: 1;
     }
 }
+
+@-webkit-keyframes ballBouncing {
+    0%{
+      transform: translateY(-200vh);
+    }
+    55%{
+      transform: scale(1);
+    }
+    60%{
+      transform: scale(1.3, 0.7);
+    }
+    63%{
+      transform: scale(1);
+    }
+    80%{
+      /* transform: translateY(-45vh); */
+      bottom: 2rem;
+    }
+    100%{
+      transform: translateY(-93vh);
+      bottom: -0.2rem;
+    }
+  }
 
 @keyframes ballBouncing {
     0%{

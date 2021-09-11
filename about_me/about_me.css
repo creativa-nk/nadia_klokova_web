@@ -32,7 +32,9 @@
   -moz-animation: bg_about_me 20s forwards; /* Firefox */
   -webkit-animation: bg_about_me 20s forwards; /* Safari and Chrome */
   -o-animation: bg_about_me 20s forwards; /* Opera */
+          animation: bg_about_me 20s forwards; 
   animation: bg_about_me 20s forwards; 
+          animation: bg_about_me 20s forwards; 
 }
 
 .titulo{
@@ -49,7 +51,8 @@
   -webkit-animation: waviy 1s 2s both; /* Safari and Chrome */
   -o-animation: waviy 1s 2s both; /* Opera */
   animation: waviy 1s 2s both;
-  animation-delay: calc(.1s * var(--i))
+  -webkit-animation-delay: calc(.1s * var(--i));
+          animation-delay: calc(.1s * var(--i))
 }
 
 .container_text{
@@ -65,7 +68,7 @@
   -moz-animation:sectionAnimation 5s  forwards; /* Firefox */
   -webkit-animation:sectionAnimation 5s  forwards; /* Safari and Chrome */
   -o-animation:sectionAnimation 5s  forwards; /* Opera */
-  animation:sectionAnimation 5s  forwards;
+     animation:sectionAnimation 5s  forwards;
 }
 .container_text a{
   text-decoration: none; 
@@ -86,6 +89,18 @@
 
 /* -------------------Animations----------------------- */
 
+@-webkit-keyframes bg_about_me {
+ 0%{
+    background: rgb(67, 173, 243);
+  }
+  80%{
+    background:rgb(0, 20, 73);
+  }
+  100%{
+    background: rgb(67, 173, 243);
+  }
+}
+
 @keyframes bg_about_me {
  0%{
     background: rgb(67, 173, 243);
@@ -96,6 +111,29 @@
   100%{
     background: rgb(67, 173, 243);
   }
+}
+
+@-webkit-keyframes sectionAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+}
+20% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+100% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  
+ }
 }
 
 @keyframes sectionAnimation {
@@ -122,6 +160,25 @@
 }
 
 
+@-webkit-keyframes waviy {
+  0%{
+    opacity: 0;
+    transform: translateY(0);
+    -webkit-transform:translateY(0);
+  }
+  40%,100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform:translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+    -webkit-transform:translateY(-20px);
+  }
+  
+}
+
+
 @keyframes waviy {
   0%{
     opacity: 0;
@@ -138,6 +195,15 @@
     -webkit-transform:translateY(-20px);
   }
   
+}
+
+@-webkit-keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 @keyframes appear{
@@ -185,6 +251,29 @@
 
 /* --------------ROCKET------------------- */
 
+@-webkit-keyframes flicker {
+  0% {
+    transform: rotate(-1deg);
+    -webkit-transform:rotate(-1deg);
+  }
+  20% {
+    transform: rotate(3deg) scaleY(1.05);
+    -webkit-transform:rotate(3deg) scaleY(1.05);
+  }
+  60% {
+    transform: rotate(1deg);
+    -webkit-transform:rotate(1deg);
+  }
+  80% {
+    transform: rotate(-1deg) scaleY(0.9);
+    -webkit-transform: rotate(-1deg) scaleY(0.9);
+  }
+  100% {
+    transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+  }
+}
+
 @keyframes flicker {
   0% {
     transform: rotate(-1deg);
@@ -208,10 +297,28 @@
   }
 }
 
+@-webkit-keyframes rocket_launch {
+  100%{
+    transform: translateY(-1300px);
+    -webkit-transform: translateY(-1300px);
+  }
+}
+
 @keyframes rocket_launch {
   100%{
     transform: translateY(-1300px);
     -webkit-transform: translateY(-1300px);
+  }
+}
+
+@-webkit-keyframes flame {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.6;
+    transform: translateY(-1300px);
+    -webkit-transform:translateY(-1300px);
   }
 }
 
@@ -223,6 +330,17 @@
     opacity: 0.6;
     transform: translateY(-1300px);
     -webkit-transform:translateY(-1300px);
+  }
+}
+
+@-webkit-keyframes draw_rocket {
+  0%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 40000;
+  }
+  100%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 0;
   }
 }
 

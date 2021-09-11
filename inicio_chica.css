@@ -15,10 +15,8 @@
     width: 100%;
     position: absolute;
     z-index: -1;
-    opacity: 0;
-    -moz-animation:bounceIn 1s 6s forwards; /* Firefox */
-    -webkit-animation:bounceIn 1s 6s forwards; /* Safari and Chrome */
-    -o-animation:bounceIn 1s 6s forwards; /* Opera */
+    opacity: 0; /* Firefox */
+    -webkit-animation:bounceIn 1s 6s forwards; /* Safari and Chrome */ /* Opera */
     animation: bounceIn 1s 6s forwards ;
   }
   .window{
@@ -56,7 +54,9 @@
     width: auto;
     top: 40%;
     right: 40%; 
-    transition: animation  .7s;
+    transition: -webkit-animation  .7s; 
+    transition: animation  .7s; 
+    transition: animation  .7s, -webkit-animation  .7s;
     /*see animation down */
   }
   .container_bocadillo,.container_bocadillo::after,.container_bocadillo::before{
@@ -109,6 +109,17 @@
   
   
   /* ----------------------------ANIMACIONES---------------------------- */
+  @-webkit-keyframes bg_window{
+    0%{
+      background:rgb(0, 14, 54);
+    }
+    40%{
+        background:rgb(123, 220, 255) ;
+    }
+    100%{
+      background:rgb(0, 14, 54);
+    }
+  }
   @keyframes bg_window{
     0%{
       background:rgb(0, 14, 54);
@@ -122,23 +133,32 @@
   }
   
   
-  @keyframes fadeInDownBig {
+  @-webkit-keyframes fadeInDownBig {
     0% {
       opacity: 0;
-      -webkit-transform: translate3d(0, -2000px, 0);
       transform: translate3d(0, -2000px, 0);
     }
     100% {
       opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
   }
   
-  @keyframes shakeX {
+  
+  @keyframes fadeInDownBig {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -2000px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @-webkit-keyframes shakeX {
     from,
     to {
-      -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
     10%,
@@ -146,15 +166,66 @@
     50%,
     70%,
     90% {
-      -webkit-transform: translate3d(-10px, 0, 0);
       transform: translate3d(-10px, 0, 0);
     }
     20%,
     40%,
     60%,
     80% {
-      -webkit-transform: translate3d(10px, 0, 0);
       transform: translate3d(10px, 0, 0);
+    }
+  }
+  
+  @keyframes shakeX {
+    from,
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translate3d(-10px, 0, 0);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translate3d(10px, 0, 0);
+    }
+  }
+  
+  @-webkit-keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
     }
   }
   
@@ -170,30 +241,34 @@
     }
     0% {
       opacity: 0;
-      -webkit-transform: scale3d(0.3, 0.3, 0.3);
       transform: scale3d(0.3, 0.3, 0.3);
     }
     20% {
-      -webkit-transform: scale3d(1.1, 1.1, 1.1);
       transform: scale3d(1.1, 1.1, 1.1);
     }
     40% {
-      -webkit-transform: scale3d(0.9, 0.9, 0.9);
       transform: scale3d(0.9, 0.9, 0.9);
     }
     60% {
       opacity: 1;
-      -webkit-transform: scale3d(1.03, 1.03, 1.03);
       transform: scale3d(1.03, 1.03, 1.03);
     }
     80% {
-      -webkit-transform: scale3d(0.97, 0.97, 0.97);
       transform: scale3d(0.97, 0.97, 0.97);
     }
     to {
       opacity: 1;
-      -webkit-transform: scale3d(1, 1, 1);
       transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  
+  @-webkit-keyframes appear {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
     }
   }
   
@@ -208,6 +283,14 @@
   }
   
   /* The typing effect */
+  @-webkit-keyframes typing {
+    from {
+       width: 0
+       }
+    to {
+       width: 100% 
+      }
+  }
   @keyframes typing {
     from {
        width: 0
@@ -218,6 +301,14 @@
   }
   
   /* The typewriter cursor effect */
+  @-webkit-keyframes blink-caret {
+    from, to { 
+      border-color: transparent
+     }
+    50% {
+       border-color: orange
+     }
+  }
   @keyframes blink-caret {
     from, to { 
       border-color: transparent
@@ -269,7 +360,8 @@
      right: 0;
      width: 150%;
      bottom: 2rem;
-     filter: drop-shadow(2px 0px 3px rgba(50, 50, 0, 0.2));
+     -webkit-filter: drop-shadow(2px 0px 3px rgba(50, 50, 0, 0.2));
+             filter: drop-shadow(2px 0px 3px rgba(50, 50, 0, 0.2));
     }
     .sillon_delante{
       right: 0;
@@ -299,49 +391,36 @@
   /*------------- Animations------------- */
   
   
-  .section-img{
-    -moz-animation:bounceIn 1s 6s forwards ; /* Firefox */
-    -webkit-animation:bounceIn 1s 6s forwards ; /* Safari and Chrome */
-    -o-animation:bounceIn 1s 6s forwards ; /* Opera */
+  .section-img{ /* Firefox */
+    -webkit-animation:bounceIn 1s 6s forwards ; /* Safari and Chrome */ /* Opera */
     animation: bounceIn 1s 6s forwards ;
   }
-  .sillon{
-    -moz-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Firefox */
-    -webkit-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Safari and Chrome */
-    -o-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Opera */
+  .sillon{ /* Firefox */
+    -webkit-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Safari and Chrome */ /* Opera */
     animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
   }
-  .sillon_delante{
-    -moz-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Firefox */
-    -webkit-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Safari and Chrome */
-    -o-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Opera */
+  .sillon_delante{ /* Firefox */
+    -webkit-animation:fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s; /* Safari and Chrome */ /* Opera */
     animation: fadeInDownBig .7s 15s forwards, shakeX .12s 15.4s;
   }
-  .window{
-    -moz-animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite; /* Firefox */
-    -webkit-animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite; /* Safari and Chrome */
-    -o-animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite; /* Opera */
+  .window{ /* Firefox */
+    -webkit-animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite; /* Safari and Chrome */ /* Opera */
     animation:bounceIn .7s 16s forwards, bg_window 20s 16s infinite;
   }
   .chica{
-    animation-delay: 16.8s;
+    -webkit-animation-delay: 16.8s;
+            animation-delay: 16.8s;
   }
-  .container_bocadillo{
-    -moz-animation:appear 0.7s 25s forwards; /* Firefox */
-    -webkit-animation:appear 0.7s 25s forwards; /* Safari and Chrome */
-    -o-animation:appear 0.7s 25s forwards; /* Opera */
+  .container_bocadillo{ /* Firefox */
+    -webkit-animation:appear 0.7s 25s forwards; /* Safari and Chrome */ /* Opera */
     animation: appear 0.7s 25s forwards;
   }
-  .container_bocadillo::after{
-    -moz-animation:appear 0.7s 25.5s forwards; /* Firefox */
-    -webkit-animation:appear 0.7s 25.5s forwards; /* Safari and Chrome */
-    -o-animation:appear 0.7s 25.5s forwards; /* Opera */
+  .container_bocadillo::after{ /* Firefox */
+    -webkit-animation:appear 0.7s 25.5s forwards; /* Safari and Chrome */ /* Opera */
     animation: appear 0.7s 25.5s forwards;
   }
-  .container_bocadillo::before{
-    -moz-animation:appear 0.7s 26s forwards; /* Firefox */
-    -webkit-animation:appear 0.7s 26s forwards; /* Safari and Chrome */
-    -o-animation:appear 0.7s 26s forwards; /* Opera */
+  .container_bocadillo::before{ /* Firefox */
+    -webkit-animation:appear 0.7s 26s forwards; /* Safari and Chrome */ /* Opera */
     animation: appear 0.7s 26s forwards;
   }
   

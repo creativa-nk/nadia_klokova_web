@@ -46,11 +46,13 @@
   margin-top: 2rem;
 }
 .skills.titulo .letra{
-  animation: waviy 1.5s both;
+  -webkit-animation: waviy 1.5s both;
+          animation: waviy 1.5s both;
 
 }
 .soft_skills.titulo .letra{
-  animation: waviy 1.5s both;
+  -webkit-animation: waviy 1.5s both;
+          animation: waviy 1.5s both;
 }
 
 .skill{
@@ -112,10 +114,12 @@
 }
 
 .cerebro_derch{
-  animation: draw_derch 3s linear forwards, brillo_svg 2s 4s infinite;  
+  -webkit-animation: draw_derch 3s linear forwards, brillo_svg 2s 4s infinite;
+          animation: draw_derch 3s linear forwards, brillo_svg 2s 4s infinite;  
 }
 .cerebro_abajo{
-  animation: draw_neuronas 4s linear forwards;
+  -webkit-animation: draw_neuronas 4s linear forwards;
+          animation: draw_neuronas 4s linear forwards;
 }
 
 .cerebro_derch,.cerebro_abajo{
@@ -131,11 +135,28 @@
   stroke-width: 18px;
   stroke-dashoffset: 0;
   stroke-dasharray: 80;
-  animation: draw_neuronas 5s linear infinite, brillo_svg 2s 8s infinite;
+  -webkit-animation: draw_neuronas 5s linear infinite, brillo_svg 2s 8s infinite;
+          animation: draw_neuronas 5s linear infinite, brillo_svg 2s 8s infinite;
 }
 
 
 /* --------------Animations---------------- */
+
+@-webkit-keyframes draw_derch {
+  0%{
+     fill-opacity: 0; 
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 80000;
+  }
+  40%{
+    fill-opacity: 0; 
+  }
+  100%{
+     fill-opacity: 0.4; 
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 0;
+  }
+}
 
 @keyframes draw_derch {
   0%{
@@ -153,6 +174,17 @@
   }
 }
 
+@-webkit-keyframes draw_neuronas {
+  0%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: -80000;
+  }
+  100%{
+      stroke: rgb(255, 254, 254);
+      stroke-dashoffset: 0;
+  }
+}
+
 @keyframes draw_neuronas {
   0%{
       stroke: rgb(255, 254, 254);
@@ -161,6 +193,27 @@
   100%{
       stroke: rgb(255, 254, 254);
       stroke-dashoffset: 0;
+  }
+}
+
+ 
+@-webkit-keyframes brillo_svg{
+/*   0%,80%{
+    -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) ;
+            filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+  } */
+  0%{
+    -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 40px #0ba9ca) 
+    drop-shadow(0 0 50px #ffffff) drop-shadow(0 0 70px rgba(255, 255, 255, 0.15));
+            filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 40px #0ba9ca) 
+            drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 70px rgba(255, 255, 255, 0.15));
+  }
+  100%{
+    -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.616)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.459)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.349)) drop-shadow(0 0 40px #0ba9ca) 
+    drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 90px rgba(255, 255, 255, 0.216));
+            filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.616)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.459)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.349)) drop-shadow(0 0 40px #0ba9ca) 
+            drop-shadow(0 0 70px #ffffff) drop-shadow(0 0 90px rgba(255, 255, 255, 0.216));
+  
   }
 }
 
@@ -267,12 +320,25 @@
   .cerebro_neuronas{
     stroke-width: 22px;
     stroke-dasharray: 90;
-    animation: draw_derch_neuronas 3s 3s linear infinite,brillo_svg 2s 4s infinite;
+    -webkit-animation: draw_derch_neuronas 3s 3s linear infinite,brillo_svg 2s 4s infinite;
+            animation: draw_derch_neuronas 3s 3s linear infinite,brillo_svg 2s 4s infinite;
   }
 
   .wraper_cv{
     text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.4);
   }
+
+
+    @-webkit-keyframes draw_derch_neuronas {
+        0%{
+            stroke: rgb(255, 254, 254);
+            stroke-dashoffset: -2000;
+        }
+        100%{
+            stroke: rgb(255, 254, 254);
+            stroke-dashoffset: 0;
+        }
+    }
 
 
     @keyframes draw_derch_neuronas {
