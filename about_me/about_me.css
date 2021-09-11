@@ -285,10 +285,10 @@
   position: absolute;
   opacity: 0;
   transition: 250ms ease;
-  -moz-animation: flame 12s 12.5s  infinite; /* Firefox */
-  -webkit-animation: flame 12s 12.5s  infinite; /* Safari and Chrome */
-  -o-animation: flame 12s 12.5s  infinite; /* Opera */
-  animation: flame 12s 12.5s  infinite;
+  -moz-animation: flame 12s 12.5s  forwards; /* Firefox */
+  -webkit-animation: flame 12s 12.5s  forwards; /* Safari and Chrome */
+  -o-animation: flame 12s 12.5s  forwards; /* Opera */
+  animation: flame 12s 12.5s  forwards;
 }
 /* ------------FLAME------------- */
 .flame-wrapper{
