@@ -29,10 +29,10 @@
   text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.2);
   font-size: 1.6rem;
   font-weight: bold; 
-  -moz-animation: bg_about_me 11s forwards; /* Firefox */
-  -webkit-animation: bg_about_me 11s forwards; /* Safari and Chrome */
-  -o-animation: bg_about_me 11s forwards; /* Opera */
-  animation: bg_about_me 11s forwards; 
+  -moz-animation: bg_about_me 20s forwards; /* Firefox */
+  -webkit-animation: bg_about_me 20s forwards; /* Safari and Chrome */
+  -o-animation: bg_about_me 20s forwards; /* Opera */
+  animation: bg_about_me 20s forwards; 
 }
 
 .titulo{
@@ -87,11 +87,14 @@
 /* -------------------Animations----------------------- */
 
 @keyframes bg_about_me {
-  0%,50%{
+ 0%{
     background: rgb(67, 173, 243);
   }
-  100%{
+  80%{
     background:rgb(0, 20, 73);
+  }
+  100%{
+    background: rgb(67, 173, 243);
   }
 }
 
@@ -223,7 +226,7 @@
   }
 }
 
-@keyframes draw {
+@keyframes draw_rocket {
   0%{
       stroke: rgb(255, 254, 254);
       stroke-dashoffset: 40000;
@@ -255,17 +258,17 @@
   height: 100%;
   bottom: 0;
   right: 0;
-  -moz-animation: rocket_launch 12s 12.5s infinite; /* Firefox */
-  -webkit-animation: rocket_launch 12s 12.5s infinite; /* Safari and Chrome */
-  -o-animation: rocket_launch 12s 12.5s infinite; /* Opera */
-  animation: rocket_launch 12s 12.5s infinite ;
+  -moz-animation: rocket_launch 12s 12.5s forwards; /* Firefox */
+  -webkit-animation: rocket_launch 12s 12.5s forwards; /* Safari and Chrome */
+  -o-animation: rocket_launch 12s 12.5s forwards; /* Opera */
+  animation: rocket_launch 12s 12.5s forwards ;
 }
 
 .rocket{
-  -moz-animation: draw 4s 8s linear both; /* Firefox */
-  -webkit-animation: draw 4s 8s linear both; /* Safari and Chrome */
-  -o-animation: draw 4s 8s linear both; /* Opera */
-  animation: draw 4s 8s linear both;  
+  -moz-animation: draw_rocket 4s 8s linear both; /* Firefox */
+  -webkit-animation: draw_rocket 4s 8s linear both; /* Safari and Chrome */
+  -o-animation: draw_rocket 4s 8s linear both; /* Opera */
+  animation: draw_rocket 4s 8s linear both;  
 }
 
 .rocket-wrapper {
