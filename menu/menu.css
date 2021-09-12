@@ -330,10 +330,10 @@
     100%{
         bottom: -.2rem;
         -webkit-transform: translateY(-90vh);
-        -ms-transform: translateY(-92vh);
+        -ms-transform: translateY(-90vh);
         -o-transform: translateY(-90vh);
         transform: translateY(-90vh);
-        -moz-transform: translateY(-92vh);
+        -moz-transform: translateY(-87vh);
 }
   }
 
