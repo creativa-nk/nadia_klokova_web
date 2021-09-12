@@ -77,10 +77,10 @@
   font-size: 1.4rem;
   /* color: rgb(0, 17, 255); */
   opacity: 0;
-  -moz-animation: appear 3s 14s forwards; /* Firefox */
-  -webkit-animation: appear 3s 14s forwards; /* Safari and Chrome */
-  -o-animation: appear 3s 14s forwards; /* Opera */
-  animation: appear 3s 14s forwards;
+  -moz-animation: appear 3s 20s forwards; /* Firefox */
+  -webkit-animation: appear 3s 20s forwards; /* Safari and Chrome */
+  -o-animation: appear 3s 20s forwards; /* Opera */
+  animation: appear 3s 20s forwards;
 }
 .container_text a:hover{
     color: rgba(129, 141, 163, 0.7);
