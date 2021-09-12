@@ -328,7 +328,7 @@
       bottom: 2rem;
     }
     100%{
-        bottom: -1rem;
+        bottom: -.2rem;
         -webkit-transform: translateY(-90vh);
         -ms-transform: translateY(-92vh);
         -o-transform: translateY(-90vh);

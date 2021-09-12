@@ -261,14 +261,14 @@
    position: relative;
   }
   .soft_skills p{
-    margin-top: .4rem;
+    margin-top: .15rem;
   }
   .titulo_skills span {
     font-size: 1.3rem;
     font-weight: bolder;
   }
   .container_languages{
-    margin-top: 3.5rem;
+    margin-top: 4rem;
   }
   .container_svg{
     margin: 0 auto;
@@ -283,11 +283,6 @@
   .container_cerebro_svg{
     width: 300px;
     height: 300px;
-  }
-  .brillo{
-    width: 50px;
-    height: 10px;
-    top: 40%;
   }
   #cerebro_svg{
     /* background: #fbdc12; */
@@ -310,13 +305,14 @@
     height: 7px;
   }
   .skill{
-    width: 150px;
+    width: 155px;
     margin-top: .2rem;
   }
 
 }
 
 @media only screen and (max-width:425px){
+
   .cerebro_neuronas{
     stroke-width: 22px;
     stroke-dasharray: 90;
@@ -325,7 +321,15 @@
   }
 
   .wraper_cv{
+    overflow: auto;
     text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.4);
+  }
+  .skill{
+    width: 150px;
+    margin-top: .1rem;
+  }
+  .dots{
+    width: 50px;
   }
 
 
