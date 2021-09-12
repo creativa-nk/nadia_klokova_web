@@ -322,6 +322,8 @@
 
   .wraper_cv{
     overflow: auto;
+    -webkit-overflow-scrolling: auto;
+    -moz-overflow:auto;
     text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.4);
   }
   .skill{
