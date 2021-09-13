@@ -89,6 +89,10 @@
   justify-content: center;
   align-items: center;
 }
+.container_svg img{
+  width: 80%;
+  height: auto;
+}
 .imagen{
  /*  background: red; */
   position: absolute;
@@ -285,7 +289,7 @@
     height: 300px;
   }
   #cerebro_svg{
-    /* background: #fbdc12; */
+    background: #fbdc12;
     width: 100%;
     height: 100%;
   }
@@ -312,6 +316,10 @@
 }
 
 @media only screen and (max-width:425px){
+  .container_svg img{
+    width: 130%;
+    height: auto;
+  }
 
   .cerebro_neuronas{
     stroke-width: 22px;
