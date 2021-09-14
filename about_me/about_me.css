@@ -4,11 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
 #about_me{
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   /* background: rosybrown; */
 }
 
@@ -359,10 +361,10 @@
 .container_rocket {
   /* background: rgba(255, 0, 0, 0.452); */
   position: absolute;
-  bottom:.5rem;
-  right: 0;
+  bottom:1rem;
+  right: 1rem;
   width: 100px;
-  height: 90px;
+  height: 200px;
 }
 .rocket{
   fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
@@ -373,9 +375,9 @@
 #rocket_svg{
   position: absolute;
   width: 100%;
-  height: 100%;
-  bottom: 0;
-  right: 0;
+  height: 100px;
+  top: 0;
+  left: 0;
   -moz-animation: rocket_launch 12s 18s forwards; /* Firefox */
   -webkit-animation: rocket_launch 12s 18s forwards; /* Safari and Chrome */
   -o-animation: rocket_launch 12s 18s forwards; /* Opera */
@@ -393,13 +395,13 @@
  /*  background: rgba(187, 188, 143, 0.671); */
   position: absolute;
   width: 80%;
-  height: 80%;
+  height: 80px;
   bottom: 0;
   left:0;
   transition: 4s ease;
   pointer-events: none;
 }
-.rocket-wrapper .flame-wrapper {
+ .flame-wrapper {
   position: absolute;
   opacity: 0;
   transition: 250ms ease;
@@ -410,10 +412,10 @@
 }
 /* ------------FLAME------------- */
 .flame-wrapper{
-  width: 10px;
+  width: 40px;
   height: 40px;
-  left: 20%;
-  bottom: -50%;
+  top: 6.5rem;
+  left: 26%;
 }
 .flame {
   position: absolute;

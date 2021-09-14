@@ -113,8 +113,8 @@
 #cerebro_svg{
  /*  background: rgba(255, 0, 0, 0.37); */
   z-index: 1;
-  width: 70%;
-  height: 70%;
+  width: 90%;
+  height: 90%;
 }
 
 .cerebro_derch{
@@ -142,9 +142,27 @@
   -webkit-animation: draw_neuronas 5s linear infinite, brillo_svg 2s 8s infinite;
           animation: draw_neuronas 5s linear infinite, brillo_svg 2s 8s infinite;
 }
+#cerebro_nuevo_svg{
+  /*  background: rgba(255, 0, 0, 0.37); */
+   z-index: 1;
+   width: 90%;
+   height: 90%;
+   display: block;
+ }
 
+.cerebro_nuevo{
+  stroke-dasharray: 272;
+  stroke-dashoffset: 272;
+  animation: drow_nuevo 10s 2s infinite forwards;
+}
 
 /* --------------Animations---------------- */
+
+@keyframes drow_nuevo{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
 
 @-webkit-keyframes draw_derch {
   0%{
