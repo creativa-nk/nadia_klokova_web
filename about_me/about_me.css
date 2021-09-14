@@ -239,13 +239,14 @@
   .container_text{
     width: 80%;
     height: auto;
+    margin: .5rem;
   }
   .about_me{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.5);
   }
   .titulo{
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -361,8 +362,8 @@
 .container_rocket {
   /* background: rgba(255, 0, 0, 0.452); */
   position: absolute;
-  bottom:1rem;
-  right: 1rem;
+  bottom:0;
+  right: .5rem;
   width: 100px;
   height: 200px;
 }
