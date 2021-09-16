@@ -4,12 +4,13 @@
   }
 .container_chica{
     /* background: rgba(255, 0, 0, 0.294); */
-    width: 1000px;
-    height: 800px;
+    width: 70vw;
+    height: 88vh;
     overflow: hidden;
     position: absolute;
-    bottom: 4rem;
-    left: 30%;
+    bottom: 2rem;
+    right: 10%;
+    left: 20%;
   }
   .section-img{
     width: 100%;
@@ -320,15 +321,17 @@
   
   
   /*-------------- MediaQuery-------------- */
+
   
-  @media only screen and (min-width: 768px) and ( orientation: portrait){
+  @media only screen and (max-width: 768px) and ( orientation: portrait){
     .container_chica{
       /* background: rgba(234, 0, 255, 0.294); */
-      width: 900px;
-      height: 800px;
+      width: 800px;
+      height: 700px;
       position: absolute;
-      top: 2.5rem;
-      right: 200px;
+      top: 5rem;
+      right: 3rem;
+    
     }
      
   }
