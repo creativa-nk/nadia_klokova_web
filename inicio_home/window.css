@@ -1,10 +1,11 @@
 .window{
     overflow: hidden;
     position: absolute;
+    left: 10%;
     z-index: 4;
     margin: 1em;
     z-index: -1;
-    width: 80%;
+    width: 70%;
     height: 70%;
     background: rgb(53, 83, 137);
     border-radius: 33% 40% 60% 20% / 60% 40% 45% 25%;
@@ -98,7 +99,6 @@
               50px -50px 0 rgb(123, 220, 255),
               290px -100px 0 rgb(123, 220, 255),
               330px -150px 0 rgb(123, 220, 255),
-              150px -150px 0 rgb(123, 220, 255),
               290px 100px 0 rgb(123, 220, 255),
               330px 150px 0 rgb(123, 220, 255),
               150px 150px 0 rgb(123, 220, 255),
@@ -304,6 +304,7 @@
     .window{
         width: 80%;
         height: 55%;
+        left: 3%;
       }
       .star {
         height: 2px;

@@ -9,9 +9,7 @@
 
 #sillon_svg{
     /* background: green; */
-    width: 90%;
-    /* margin: 30% 0 0 50%; */
-    /* display: block; */
+    width: 80%;
     position: absolute;
     top: 0;
     right: 0;
@@ -27,9 +25,8 @@
 }
 #planta_baja{
     /* background: rgba(255, 0, 0, 0.24); */
-    width: 100%;
-    height: 100%;
-   /*  display: block; */
+    width: 90%;
+    height: 90%;
     position: absolute;
     top: 0;
     left: 0;   
@@ -103,6 +100,91 @@
 }
 
   /*-------------- MediaQuery-------------- */
+  @media only screen and (max-width:1024px){
+    #sillon_svg{
+        /* background: green; */
+        width: 260px;
+        margin: 280px 0 0 140px;
+        display: block;
+    }
+    
+    #planta_baja{
+        /* background: red; */
+        width: 200px;
+        bottom: -2rem;
+    }
+    .chica{
+        width: 110%;
+        right: 0;
+        bottom: 1rem;
+      } 
+    .sillonConChica{
+        width: 250px;
+        height: 250px;
+        bottom: 1rem;
+    }
+    #sillon_svg{
+        /* background: green; */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        top: 0;
+        left: 0;
+    }
+    .container_planta{
+        /* background: rgb(194, 207, 2); */
+        height: 200px;
+        width: 150px;
+        bottom: 3.2rem;
+    }
+    #planta_baja{
+        /* background: rgba(255, 0, 0, 0.24); */
+        width: 100%;
+        height: 100%;
+
+    }
+  }
+  @media only screen and (max-width:768px){
+    #sillon_svg{
+        /* background: green; */
+        width: 260px;
+        margin: 280px 0 0 140px;
+        display: block;
+    }
+    
+    #planta_baja{
+        /* background: red; */
+        width: 200px;
+        bottom: -2rem;
+    }
+    .sillonConChica{
+        width: 250px;
+        height: 250px;
+        bottom: 2rem;
+    }
+    #sillon_svg{
+        /* background: green; */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        top: 0;
+        left: 0;
+    }
+    .container_planta{
+        /* background: rgb(194, 207, 2); */
+        height: 200px;
+        width: 150px;
+        bottom: 3.2rem;
+    }
+    #planta_baja{
+        /* background: rgba(255, 0, 0, 0.24); */
+        width: 100%;
+        height: 100%;
+
+    }
+
+  }
+
 
 @media only screen and (max-width:450px){
     #sillon_svg{

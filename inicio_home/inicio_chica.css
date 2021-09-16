@@ -4,13 +4,13 @@
   }
 .container_chica{
     /* background: rgba(255, 0, 0, 0.294); */
-    width: 70vw;
-    height: 88vh;
+    width: 60vw;
+    height: 80vh;
     overflow: hidden;
     position: absolute;
-    bottom: 2rem;
-    right: 10%;
-    left: 20%;
+    bottom: 10%;
+    right: 20%;
+    left: 25%;
   }
   .section-img{
     width: 100%;
@@ -21,27 +21,10 @@
     animation: bounceIn 1s 6s forwards ;
   }
   .window{
-    position: absolute;
-    margin: 1em;
-    z-index: -1;
-    width: 80%;
-    height: 70%;
-    /* background: rgb(53, 83, 137); */
-    border-radius: 33% 40% 60% 20% / 60% 40% 45% 25%;
-    box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.164),
-      inset 0.2rem -0.2rem 0.5rem rgba(0, 0, 0, 0.16);
+    /*see window.css  */
     /*see animation down */
   }
-  .sillon{
-    bottom: 0;
-    z-index: 0;
-   /*see animation down */
-  }
-  .sillon_delante{
-    bottom: 0;
-    z-index: 2;
-   /*see animation down */
-  }
+
   .chica{
     bottom: 0;
     z-index: 1;
@@ -322,18 +305,51 @@
   
   /*-------------- MediaQuery-------------- */
 
+  @media only screen and (max-width:1024px){
+    .bocadillo p {
+      font-size: 0.7em;
+    }
+    .container_bocadillo{
+      top: 47%;
+      right: 35%;
+      padding: 1em;
+    }
+    .bocadillo p {
+      font-size: 0.7em;
+    }
+    .container_bocadillo::after{
+      width: 1em;
+      height: .3em;
+      top: 115%;
+    }
+    .container_bocadillo::before{
+      width: .3em;
+      height: .3em;
+      top: 137%;
+    }
+  }
+
   
   @media only screen and (max-width: 768px) and ( orientation: portrait){
     .container_chica{
       /* background: rgba(234, 0, 255, 0.294); */
-      width: 800px;
-      height: 700px;
+      width: 80vw;
+      height: 60vh;
       position: absolute;
-      top: 5rem;
-      right: 3rem;
-    
+      top: 20%;
+      left: 10%;
     }
-     
+    .chica{
+      width: 100%;
+      right: 0;
+      bottom: 2rem;
+    } 
+    .container_bocadillo{
+      top: 47%;
+      right: 30%;
+      padding: 1em;
+    }
+   
   }
   
   
@@ -357,18 +373,6 @@
     .chica{
       width: 100%;
       right: 0;
-      bottom: 2rem;
-    }
-    .sillon{
-     right: 0;
-     width: 150%;
-     bottom: 2rem;
-     -webkit-filter: drop-shadow(2px 0px 3px rgba(50, 50, 0, 0.2));
-             filter: drop-shadow(2px 0px 3px rgba(50, 50, 0, 0.2));
-    }
-    .sillon_delante{
-      right: 0;
-      width: 150%;
       bottom: 2rem;
     }
     .container_bocadillo{
