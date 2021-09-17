@@ -246,15 +246,15 @@ video{
   .container_works {
       height: 700px;
     }
-    main#carousel {
+/*     main#carousel {
       width: 100vw;
       height: 350px;
-   }
-   .item {
+   } */
+  /*  .item {
     position: absolute;
-    width: 250px;
-    height: 350px;
-   }
+    width: 200px;
+    height: 400px;
+   } */
    .container_works .titulo{
     font-weight: normal;
   }
