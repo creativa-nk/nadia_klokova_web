@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@250&display=swap');
 
 *{
     margin: 0;
@@ -37,7 +37,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.skills .titulo,.soft_skills .titulo {
+.skills .titulo_skills,.soft_skills .titulo_skills {
   text-transform: uppercase;
   font-size: 1.7rem;
   letter-spacing: 0px;
@@ -88,21 +88,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.container_svg img{
-  width: 80%;
-  height: auto;
-}
-.imagen{
- /*  background: red; */
-  position: absolute;
-  z-index: 0;
-  width: 800px;
-  height: 90vh;
-}
-.imagen img{
-  width: 100%;
-  height: 100%;
 }
 
 .container_svg{
@@ -343,18 +328,10 @@
 }
 
 @media only screen and (max-width:425px){
-  .container_svg img{
-    width: 130%;
+  #cerebro_nuevo_svg{
+    width: 90%;
     height: auto;
   }
-
-  .cerebro_neuronas{
-    stroke-width: 22px;
-    stroke-dasharray: 90;
-    -webkit-animation: draw_derch_neuronas 3s 3s linear infinite,brillo_svg 2s 4s infinite;
-            animation: draw_derch_neuronas 3s 3s linear infinite,brillo_svg 2s 4s infinite;
-  }
-
   .wraper_cv{
     overflow: auto;
     -webkit-overflow-scrolling: auto;
@@ -369,27 +346,4 @@
     width: 50px;
   }
 
-
-    @-webkit-keyframes draw_derch_neuronas {
-        0%{
-            stroke: rgb(255, 254, 254);
-            stroke-dashoffset: -2000;
-        }
-        100%{
-            stroke: rgb(255, 254, 254);
-            stroke-dashoffset: 0;
-        }
-    }
-
-
-    @keyframes draw_derch_neuronas {
-        0%{
-            stroke: rgb(255, 254, 254);
-            stroke-dashoffset: -2000;
-        }
-        100%{
-            stroke: rgb(255, 254, 254);
-            stroke-dashoffset: 0;
-        }
-    }
 }

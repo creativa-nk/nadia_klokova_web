@@ -6,7 +6,9 @@
 }
 
 body{
-  background: rgb(140, 206, 241);
+  background: rgb(96, 187, 236);
+  /* background: rgb(140, 206, 241); */
+  /* background: rgb(67, 173, 243); */
 }
 html{
   height: 100vh;
