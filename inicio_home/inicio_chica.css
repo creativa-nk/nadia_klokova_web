@@ -36,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 1.5rem;
     width: auto;
     top: 40%;
     right: 40%; 
@@ -73,6 +73,7 @@
   }
   .bocadillo p {
     color: #774f38;
+    font-size: .7rem;
     font-family: "Baloo 2", cursive;
     font-weight: bold;
     /* font-family: monospace; */
