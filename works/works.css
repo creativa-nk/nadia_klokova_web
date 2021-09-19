@@ -169,8 +169,8 @@ video{
   grid-column:3/6;
   /* background-color: #fff; */
   /* border-radius: 8px; */
-  width:300px;
-  min-width: 330px;
+  width:auto;
+  min-width: 380px;
   /* padding: 16px 10px; */
 }
 
@@ -194,7 +194,7 @@ video{
   color: #ffffff;
   font-size: 1rem;
   line-height: 24px;
-  word-spacing: 2px;
+  word-spacing: 0px;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: -1px 3px 3px rgba(50, 50, 0, 0.2);
@@ -204,7 +204,11 @@ video{
   text-decoration: none;
   cursor: pointer;
 }
+.work-info .title a span{
+  color: #ffd670;
+  text-transform: lowercase;
 
+}
 .sub-line {
   display: flex;
   justify-content: space-between;
