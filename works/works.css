@@ -28,7 +28,6 @@
 .container_works {
 /*   background: #e9ff70; */
   font-family: 'DM Sans', sans-serif;
-  
     height: 800px;
     margin: 0;
     display: grid;
@@ -261,18 +260,14 @@ video{
 
 @media only screen and (max-width:450px){
   .container_works {
-      height: 700px;
+      height: 500px;
     }
-/*     main#carousel {
-      width: 100vw;
-      height: 350px;
-   } */
-  /*  .item {
-    position: absolute;
-    width: 200px;
-    height: 400px;
-   } */
+    
    .container_works .titulo{
     font-weight: normal;
   }
+  .work-info {
+    text-align: center;
+  }
+
 }
