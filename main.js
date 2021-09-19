@@ -1,3 +1,4 @@
+/* ----------------------MENU------------------------------- */
 const btn = document.querySelector('.container_menu')
 const background = document.querySelector('.background')
 const menu = document.querySelector('.menu');
@@ -11,15 +12,6 @@ menu.classList.toggle('active');
 contact.classList.toggle('active');
 })
 
-/* function toggleMenu(){
-  if(background.classList.contains('active')){
-      closeNav()
-  }else{
-    background.classList.add('active');
-    menu.classList.add('active');
-    contact.classList.add('active')
-  }
-} */
 
 function closeNav(){
   background.classList.remove('active');
@@ -27,6 +19,26 @@ function closeNav(){
   contact.classList.remove('active');
 }
 
+/* ---------------Home------------------------------------- */
+
+const chica = document.querySelector('.chica')
+const sillon_uno = document.querySelector('.sillon_uno') 
+const sillon_dos = document.querySelector('.sillon_dos') 
+const planta_baja = document.querySelector('.planta_baja')
+const bocadillo = document.querySelector('.bocadillo')
+
+
+function home(){
+  bocadillo.classList.add('active')
+  sillon_uno.classList.add('active')
+  sillon_dos.classList.add('active')
+  planta_baja.classList.add('active')
+  chica.classList.add('active') 
+  console.log("has dado al boton 'home'")
+}
+
+
+/* --------------Animation titulo------------------------- */
 
 let glowInTexts = document.querySelectorAll(".glowIn");
 glowInTexts.forEach(glowInText => {
@@ -40,12 +52,6 @@ glowInTexts.forEach(glowInText => {
   });
 });
 
-
-/* btn_cerrar = $(".navegar li")
-
-btn_cerrar.on('click',function(){
-  background.removeClass("active"); */ /*  cierra menu dando a cualquier opcion del menu */
-/* }) */
 
 
 /* ---------------pestañas-----------------tabs-------------- */
@@ -62,11 +68,7 @@ targets.forEach(target =>{
         t.classList.add('active') 
     })
 })
-/* ------------------ROCKET--------------------------------------- */
 
-function launchRocket() {
-  document.getElementById("rocket").classList.add("rocket-launched");
-}
 
 
 

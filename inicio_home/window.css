@@ -316,3 +316,11 @@
       }
 
   }
+
+
+
+  /* -------------------------home------------active----------- */
+  .window.active{
+    -webkit-animation:bounceIn 1s 1s forwards, bg_window 20s 1s infinite;
+    animation:bounceIn 1s 1s forwards, bg_window 20s 1s infinite;
+}

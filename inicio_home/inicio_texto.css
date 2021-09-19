@@ -6,13 +6,10 @@ html, body{
   height: 100%;
 }
 
-/* body{
-  font-family: 'Baloo Paaji', cursive;
-  background: #1e90ff ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+#inicio{
+ width: 100%;
+ height: 100%;
+}
 
 .container_texto{
   /* background: coral; */
