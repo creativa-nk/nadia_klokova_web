@@ -260,8 +260,17 @@ video{
 
 @media only screen and (max-width:450px){
   .container_works {
-      height: 500px;
-    }
+    /*   background: #e9ff70; */
+    height: 600px;
+    grid-template-rows: 2.5fr 400px 30px 1.5fr;
+  }  
+  .item {
+    height: 370px;
+  }    
+  main#carousel{
+   /*  background: #90f1ef; */
+    height: 80vh;
+  }
     
    .container_works .titulo{
     font-weight: normal;
