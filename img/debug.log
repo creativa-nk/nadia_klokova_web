@@ -1,7 +1,0 @@
-[0824/160503.310:ERROR:local_storage_context_mojo.cc(706)] Lost connection to database
-[0827/225229.665:INFO:CONSOLE(1)] "Long rAF frame-time", source: file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js (1)
-[0830/154522.802:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
-[0830/154523.193:ERROR:local_storage_context_mojo.cc(706)] Lost connection to database
-[0830/225042.503:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
-[0830/225043.221:ERROR:local_storage_context_mojo.cc(706)] Lost connection to database
-[0901/122314.968:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
