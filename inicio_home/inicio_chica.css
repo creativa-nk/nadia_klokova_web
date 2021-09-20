@@ -83,14 +83,14 @@
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
     animation: 
-      typing 3.5s 25s steps(30, end),
-      blink-caret .5s 25s step-end infinite;
-      -moz-animation: typing 3.5s 25s steps(30, end),
-      blink-caret .5s 25s step-end infinite; /* Firefox */
-      -webkit-animation: typing 3.5s 25s steps(30, end),
-      blink-caret .5s 25s step-end infinite; /* Safari and Chrome */
-      -o-animation: typing 3.5s 25s steps(30, end),
-      blink-caret .5s 25s step-end infinite; /* Opera */
+      typing 3.5s 19s steps(30, end),
+      blink-caret .5s 19s step-end infinite;
+      -moz-animation: typing 3.5s 19s steps(30, end),
+      blink-caret .5s 19s step-end infinite; /* Firefox */
+      -webkit-animation: typing 3.5s 19s steps(30, end),
+      blink-caret .5s 19s step-end infinite; /* Safari and Chrome */
+      -o-animation: typing 3.5s 19s steps(30, end),
+      blink-caret .5s 19s step-end infinite; /* Opera */
   }
   
   
@@ -413,18 +413,20 @@
     -webkit-animation-delay: 16.8s;
             animation-delay: 16.8s;
   }
-  .container_bocadillo{ /* Firefox */
-    -webkit-animation:appear 0.7s 25s forwards; /* Safari and Chrome */ /* Opera */
-    animation: appear 0.7s 25s forwards;
-  }
+  .container_bocadillo{
+    /*Firefox*/-webkit-animation:appear 0.7s 19s forwards;
+   animation: appear 0.7s 19s forwards;
+   
+}
   .container_bocadillo::after{ /* Firefox */
-    -webkit-animation:appear 0.7s 25.5s forwards; /* Safari and Chrome */ /* Opera */
-    animation: appear 0.7s 25.5s forwards;
+    -webkit-animation:appear 0.7s 19.5s forwards; /* Safari and Chrome */ /* Opera */
+    animation: appear 0.7s 19.5s forwards;
   }
-  .container_bocadillo::before{ /* Firefox */
-    -webkit-animation:appear 0.7s 26s forwards; /* Safari and Chrome */ /* Opera */
-    animation: appear 0.7s 26s forwards;
-  }
+  .container_bocadillo::before{
+    /*Firefox*/-webkit-animation:appear 0.7s 20s forwards;
+    /*SafariandChrome*//*Opera*/animation: appear 0.7s 20s forwards;
+    -webkit-animation: appear 0.7s 20s forwards;
+}
 
   /* .container_bocadillo,.container_bocadillo::after,.container_bocadillo::before{
     animation: bounceIn 1s 19s forwards ;

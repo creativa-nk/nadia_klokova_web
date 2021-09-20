@@ -11,8 +11,8 @@
     border-radius: 33% 40% 60% 20% / 60% 40% 45% 25%;
     box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.164),
       inset 0.2rem -0.2rem 0.5rem rgba(0, 0, 0, 0.16);
-    -webkit-animation:bounceIn 1s 19s forwards, bg_window 20s 19s infinite;
-            animation:bounceIn 1s 19s forwards, bg_window 20s 19s infinite;
+    -webkit-animation:bounceIn 1s 13.3s forwards, bg_window 20s 13.3s infinite;
+            animation:bounceIn 1s 13.3s forwards, bg_window 20s 13.3s infinite;
 }
 
 .moon {
@@ -26,8 +26,8 @@
     box-shadow: 0 0 25px rgba(255, 255, 200, 0.8),
       0 0 1px 15px rgba(82, 115, 159, 0.7), 0 0 1px 40px rgba(82, 115, 149, 0.45),
       0 0 1px 90px rgba(82, 115, 149, 0.3), 0 0 1px 160px rgba(92, 115, 149, 0.1);
-    -webkit-animation: sun 20s 19s infinite;
-            animation: sun 20s 19s infinite;  
+    -webkit-animation: sun 20s 13.3s infinite;
+            animation: sun 20s 13.3s infinite;  
   }
 .moon:before {
   position: absolute;
@@ -317,10 +317,3 @@
 
   }
 
-
-
-  /* -------------------------home------------active----------- */
-  .window.active{
-    -webkit-animation:bounceIn 1s 1s forwards, bg_window 20s 1s infinite;
-    animation:bounceIn 1s 1s forwards, bg_window 20s 1s infinite;
-}

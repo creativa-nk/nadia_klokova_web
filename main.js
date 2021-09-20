@@ -25,11 +25,10 @@ const chica = document.querySelector('.chica')
 const sillon_uno = document.querySelector('.sillon_uno') 
 const sillon_dos = document.querySelector('.sillon_dos') 
 const planta_baja = document.querySelector('.planta_baja')
-const bocadillo = document.querySelector('.bocadillo')
-
+/* const bocadillo = document.querySelectorAll('.bocadillo') */
 
 function home(){
-  bocadillo.classList.add('active')
+  /* bocadillo.classList.add('active') */
   sillon_uno.classList.add('active')
   sillon_dos.classList.add('active')
   planta_baja.classList.add('active')
