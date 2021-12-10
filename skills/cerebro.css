@@ -4,19 +4,17 @@
   }
 /* ----------------------CEREBRO----------------------------- */
 .cerebro1, .cerebro2, .cerebro3{
-    fill-opacity: 0;
-    /*noseveelinterior,soloelbordequeponemosdespues*/stroke-width: 80px;
+    fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
+    stroke-width: 80px;
     stroke-dashoffset: 0;
-    stroke-dasharray: 50;
+    stroke-dasharray: 100;
     animation: draw 6s linear infinite;
     -webkit-animation: draw 6s linear infinite;
     filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 40px #0ba9ca)     drop-shadow(0 0 20px #ffffff) drop-shadow(0 0 25px rgba(255, 255, 255, 0.35));
     -webkit-filter:drop-shadow( 0 0 3px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 40px #0ba9ca)     drop-shadow(0 0 20px #ffffff) drop-shadow(0 0 25px rgba(255, 255, 255, 0.35));
 }
 .cerebro3,.cerebro2{
-    fill-opacity: 0; /* no se ve el interior, solo el borde que ponemos despues */
     stroke-width: 40px;
-    stroke-dasharray: 90;
 }
 @-webkit-keyframes draw {
     0%{
@@ -32,13 +30,6 @@
 /* @media query */
 @media only screen and (max-width:768px){
     .cerebro1, .cerebro2, .cerebro3{
-        stroke-dasharray: 140;
+        stroke-dasharray: 120;
        }
 }
-@media only screen and (max-width:425px){
-
-    .cerebro1, .cerebro2, .cerebro3{
-      stroke-dasharray: 130;
-     }
-  
-  }
