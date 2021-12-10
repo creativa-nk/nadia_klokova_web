@@ -308,8 +308,12 @@ video{
   .container_works {
     /*   background: #e9ff70; */
     height: 600px;
-    grid-template-rows: 2.5fr 400px 30px 1.5fr;
+    grid-template-rows: 2.5fr 400px 30px 30px 1.5fr;
   }  
+  .container_info {
+    grid-row:5/6;
+
+  }
   .item {
     height: 370px;
   }    
@@ -317,8 +321,10 @@ video{
    /*  background: #90f1ef; */
     height: 80vh;
   }
-    
-   .container_works .titulo{
+  .container_works{
+    margin-top: -50px;
+  }  
+  .container_works .titulo{
     font-weight: normal;
   }
   
